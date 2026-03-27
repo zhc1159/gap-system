@@ -241,6 +241,7 @@ export default {
       title: '接口配置',
       name: '接口名称',
       ip: 'IP地址',
+      address: '地址',
       mask: '子网掩码',
       mac: 'MAC地址',
       status: '状态',
@@ -261,7 +262,11 @@ export default {
       timezone: '时区',
       ntpServer: 'NTP服务器',
       syncNow: '立即同步',
-      manualSet: '手动设置'
+      manualSet: '手动设置',
+      sync: '同步',
+      ntpEnabled: 'NTP服务',
+      syncStatus: '同步状态',
+      lastSync: '上次同步'
     }
   },
 

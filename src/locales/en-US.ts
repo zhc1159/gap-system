@@ -241,6 +241,7 @@ export default {
       title: 'Interface Config',
       name: 'Interface Name',
       ip: 'IP Address',
+      address: 'Address',
       mask: 'Subnet Mask',
       mac: 'MAC Address',
       status: 'Status',
@@ -261,7 +262,11 @@ export default {
       timezone: 'Timezone',
       ntpServer: 'NTP Server',
       syncNow: 'Sync Now',
-      manualSet: 'Manual Set'
+      manualSet: 'Manual Set',
+      sync: 'Sync',
+      ntpEnabled: 'NTP Service',
+      syncStatus: 'Sync Status',
+      lastSync: 'Last Sync'
     }
   },
 
