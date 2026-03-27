@@ -255,11 +255,42 @@ const defaultMenus: IMenuItem[] = [
 ]
 
 // Role-based menu filtering
+// deepnet: 超级管理员 - 拥有所有权限 + 系统级权限
+// sysadm: 系统管理员 - 拥有所有菜单权限
+// admin: 普通管理员 - 大部分菜单权限
+// auditor: 审计员 - 仅状态监视和审计日志
 const roleMenuMap: Record<string, string[]> = {
-  sysadm: ['*'],
+  deepnet: ['*'], // 超级管理员 - 全部权限 + 系统级权限
+  sysadm: ['*'],  // 系统管理员 - 全部菜单权限
   admin: ['status', 'system', 'authority', 'security', 'audit', 'maintenance'],
   auditor: ['status', 'audit']
 }
+
+// 系统级权限菜单（仅 deepnet 可访问）
+export const systemLevelMenus = [
+  'system-config-advanced',
+  'system-cluster',
+  'system-ha'
+]
+
+/**
+ * 检查角色是否为超级管理员
+ */
+export function isSuperAdmin(role: string | undefined): boolean {
+  return role === 'deepnet' || role === 'sysadm'
+}
+
+/**
+ * 检查角色是否拥有全部菜单权限
+ */
+export function hasFullMenuAccess(role: string | undefined): boolean {
+  if (!role) return false
+  const allowedMenus = roleMenuMap[role] || []
+  return allowedMenus.includes('*')
+}
+
+// 导出 roleMenuMap 供其他模块使用
+export { roleMenuMap }
 
 export const useMenuStore = defineStore('menu', () => {
   // State

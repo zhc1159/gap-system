@@ -1,24 +1,35 @@
 // ===========================================
 // GAP System - Animation Keyframes
+// 清新科技感动画 - 细腻流畅
 // ===========================================
 
-// Pulse Animation - 脉冲动画
+// Pulse Animation - 脉冲动画（更柔和）
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }
 
-// Pulse Glow Animation - 脉冲发光
+// Pulse Glow Animation - 脉冲发光（更鲜艳）
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.35);
   }
   50% {
     box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+  }
+}
+
+// Pulse Glow Purple - 紫色脉冲
+@keyframes pulse-glow-purple {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
   }
 }
 
@@ -80,6 +91,21 @@
   }
 }
 
+// Scale In Bounce - 弹性缩放
+@keyframes scale-in-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 // Float Animation - 浮动动画
 @keyframes float {
   0%, 100% {
@@ -90,7 +116,20 @@
   }
 }
 
-// Gradient Flow - 渐变流动
+// Float Gentle - 轻柔浮动
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+// Gradient Flow - 渐变流动（更快）
 @keyframes gradient-flow {
   0% {
     background-position: 0% 50%;
@@ -100,6 +139,19 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+// Gradient Flow Ocean - 海洋渐变流动
+@keyframes gradient-flow-ocean {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
 
@@ -129,17 +181,108 @@
     opacity: 1;
   }
   25%, 75% {
-    opacity: 0.4;
+    opacity: 0.5;
   }
 }
 
-// Animation Classes
+// Shimmer - 微光效果
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// Ripple - 波纹效果
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+// Glow Breathing - 呼吸发光
+@keyframes glow-breathing {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.6));
+  }
+}
+
+// Card Hover - 卡片悬浮效果
+@keyframes card-hover {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 212, 255, 0.05);
+  }
+  100% {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 212, 255, 0.1);
+  }
+}
+
+// Border Flow - 边框流动
+@keyframes border-flow {
+  0%, 100% {
+    border-color: rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    border-color: rgba(99, 102, 241, 0.3);
+  }
+}
+
+// Text Glow - 文字发光
+@keyframes text-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.6), 0 0 40px rgba(0, 212, 255, 0.3);
+  }
+}
+
+// Status Online - 在线状态动画
+@keyframes status-online {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+}
+
+// Status Error - 错误状态动画
+@keyframes status-error {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+}
+
+// ==========================================
+// Animation Classes - 动画类
+// ==========================================
+
 .animate-pulse {
   animation: pulse 2s ease-in-out infinite;
 }
 
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow-purple {
+  animation: pulse-glow-purple 2s ease-in-out infinite;
 }
 
 .animate-fade-in {
@@ -162,10 +305,81 @@
   animation: scale-in 0.3s ease-out;
 }
 
+.animate-scale-in-bounce {
+  animation: scale-in-bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
+.animate-float-gentle {
+  animation: float-gentle 8s ease-in-out infinite;
+}
+
 .animate-rotate {
   animation: rotate 1s linear infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-glow-breathing {
+  animation: glow-breathing 3s ease-in-out infinite;
+}
+
+.animate-border-flow {
+  animation: border-flow 3s ease-in-out infinite;
+}
+
+.animate-text-glow {
+  animation: text-glow 3s ease-in-out infinite;
+}
+
+.animate-status-online {
+  animation: status-online 2s ease-in-out infinite;
+}
+
+.animate-status-error {
+  animation: status-error 1s ease-in-out infinite;
+}
+
+// Hover 触发动画
+.hover-scale {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  }
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// 渐变背景动画
+.gradient-animated {
+  background-size: 200% 200%;
+  animation: gradient-flow 5s ease infinite;
+}
+
+.gradient-ocean-animated {
+  background-size: 200% 200%;
+  animation: gradient-flow-ocean 6s ease infinite;
 }

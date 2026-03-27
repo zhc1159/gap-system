@@ -122,6 +122,18 @@ export function hasRoutePermission(
     return true
   }
 
+  // deepnet and sysadm have access to all routes
+  if (userRole === 'deepnet' || userRole === 'sysadm') {
+    return true
+  }
+
   // Check if user role is allowed
   return roles.includes(userRole as any)
+}
+
+/**
+ * Check if user has system-level access (deepnet only)
+ */
+export function hasSystemLevelAccess(userRole: string): boolean {
+  return userRole === 'deepnet'
 }

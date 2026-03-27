@@ -1,80 +1,110 @@
 // ===========================================
 // GAP System - Global Theme Variables
 // 科技感设计规范 - Tech-Inspired Design System
+// 主题风格：清新科技感 - 不太暗，有活力，注重细节
 // ===========================================
 
 // ==========================================
-// Primary Colors - 主题色
+// Primary Colors - 主题色（更鲜艳活力）
 // ==========================================
 $primary-color: #00d4ff;           // 青色 Cyan - 主色
-$primary-light: #33ddff;           // 浅青色
+$primary-light: #5ce1ff;           // 浅青色 - 更亮
 $primary-dark: #00a8cc;            // 深青色
 
 $secondary-color: #6366f1;         // 紫色 Purple - 辅助色
 $secondary-light: #818cf8;
 $secondary-dark: #4f46e5;
 
-// ==========================================
-// Background Colors - 背景色 (适中亮度)
-// ==========================================
-$bg-primary: #1a2332;              // 主背景 - 深蓝灰
-$bg-secondary: #243447;            // 次背景
-$bg-card: #1e293b;                 // 卡片背景
-$bg-darker: #0f172a;               // 更深背景
-$bg-darkest: #020617;              // 最深背景
-$bg-hover: #334155;                // 悬停背景
+// 新增活力色彩
+$accent-cyan: #22d3ee;             // 活力青
+$accent-violet: #a78bfa;           // 活力紫
+$accent-emerald: #34d399;          // 活力绿
+$accent-amber: #fbbf24;            // 活力橙
+$accent-rose: #fb7185;             // 活力粉
 
 // ==========================================
-// Text Colors - 文字色
+// Background Colors - 背景色 (提升亮度，更加清新)
+// ==========================================
+$bg-primary: #1e2a3a;              // 主背景 - 提升亮度
+$bg-secondary: #283848;            // 次背景 - 更清新
+$bg-card: #243447;                 // 卡片背景 - 提升亮度
+$bg-darker: #162231;               // 更深背景 - 不再那么暗
+$bg-darkest: #0d1520;              // 最深背景 - 适度调亮
+$bg-hover: #3a4f63;                // 悬停背景 - 更亮更清晰
+$bg-elevated: #2d4053;             // 悬浮/弹出层背景
+
+// 玻璃态背景
+$bg-glass: rgba(30, 42, 58, 0.85);
+$bg-glass-light: rgba(40, 56, 72, 0.9);
+
+// ==========================================
+// Text Colors - 文字色（提升对比度）
 // ==========================================
 $text-primary: #f1f5f9;            // 主要文字
-$text-secondary: #cbd5e1;          // 次要文字
-$text-muted: #64748b;              // 弱化文字
-$text-placeholder: #475569;        // 占位文字
+$text-secondary: #d1d5db;          // 次要文字 - 提升亮度
+$text-muted: #94a3b8;              // 弱化文字 - 提升可读性
+$text-placeholder: #64748b;        // 占位文字
 
 // ==========================================
-// Status Colors - 状态色
+// Status Colors - 状态色（更鲜艳）
 // ==========================================
 $success-color: #10b981;           // 成功 - 绿色
 $success-light: #34d399;
+$success-glow: 0 0 20px rgba(16, 185, 129, 0.4);
 $warning-color: #f59e0b;           // 警告 - 橙色
 $warning-light: #fbbf24;
+$warning-glow: 0 0 20px rgba(245, 158, 11, 0.4);
 $danger-color: #ef4444;            // 危险 - 红色
 $danger-light: #f87171;
+$danger-glow: 0 0 20px rgba(239, 68, 68, 0.4);
 $info-color: #06b6d4;              // 信息 - 青色
 $info-light: #22d3ee;
+$info-glow: 0 0 20px rgba(6, 182, 212, 0.4);
 
 // ==========================================
-// Border Colors - 边框色
+// Border Colors - 边框色（更清晰）
 // ==========================================
-$border-color: #334155;            // 默认边框
-$border-light: #475569;            // 浅边框
-$border-dark: #1e293b;             // 深边框
+$border-color: #3d5166;            // 默认边框 - 更亮
+$border-light: #4a6075;            // 浅边框
+$border-dark: #253545;             // 深边框
 $border-focus: $primary-color;     // 聚焦边框
 
 // ==========================================
-// Gradients - 渐变色
+// Gradients - 渐变色（更鲜艳有活力）
 // ==========================================
 $gradient-primary: linear-gradient(135deg, #00d4ff 0%, #6366f1 100%);
-$gradient-secondary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-$gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
-$gradient-warning: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-$gradient-danger: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+$gradient-secondary: linear-gradient(135deg, #6366f1 0%, #a78bfa 100%);
+$gradient-success: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+$gradient-warning: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+$gradient-danger: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+$gradient-info: linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%);
 $gradient-dark: linear-gradient(180deg, $bg-primary 0%, $bg-darker 100%);
 $gradient-header: linear-gradient(90deg, $bg-darker 0%, $bg-card 100%);
 
-// ==========================================
-// Shadows - 阴影
-// ==========================================
-$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+// 新增活力渐变
+$gradient-ocean: linear-gradient(135deg, #00d4ff 0%, #0ea5e9 50%, #6366f1 100%);
+$gradient-sunset: linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #ec4899 100%);
+$gradient-aurora: linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #6366f1 100%);
+$gradient-glow: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
 
-// 发光效果 - Glow Effects
-$shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
-$shadow-glow-strong: 0 0 40px rgba(0, 212, 255, 0.5);
-$shadow-glow-purple: 0 0 20px rgba(99, 102, 241, 0.3);
+// ==========================================
+// Shadows - 阴影（更柔和）
+// ==========================================
+$shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+$shadow-md: 0 4px 8px -2px rgba(0, 0, 0, 0.2), 0 2px 6px -2px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 10px 20px -5px rgba(0, 0, 0, 0.25), 0 4px 10px -4px rgba(0, 0, 0, 0.2);
+$shadow-xl: 0 20px 30px -10px rgba(0, 0, 0, 0.3), 0 8px 16px -6px rgba(0, 0, 0, 0.25);
+
+// 发光效果 - Glow Effects（更鲜艳）
+$shadow-glow: 0 0 25px rgba(0, 212, 255, 0.35);
+$shadow-glow-strong: 0 0 50px rgba(0, 212, 255, 0.5);
+$shadow-glow-purple: 0 0 25px rgba(99, 102, 241, 0.35);
+$shadow-glow-success: 0 0 25px rgba(16, 185, 129, 0.35);
+$shadow-glow-warning: 0 0 25px rgba(245, 158, 11, 0.35);
+
+// 卡片阴影
+$shadow-card: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 212, 255, 0.05);
+$shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 212, 255, 0.1);
 
 // ==========================================
 // Spacing - 间距
@@ -114,11 +144,13 @@ $font-size-4xl: 28px;
 $font-size-5xl: 32px;
 
 // ==========================================
-// Transitions - 动画过渡
+// Transitions - 动画过渡（更流畅）
 // ==========================================
 $transition-fast: 0.15s ease;
 $transition-normal: 0.3s ease;
 $transition-slow: 0.5s ease;
+$transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
 // ==========================================
 // Z-Index - 层级
@@ -138,3 +170,15 @@ $header-height: 60px;
 $sidebar-width: 220px;
 $sidebar-collapsed-width: 64px;
 $footer-height: 40px;
+
+// ==========================================
+// Animation Keyframes - 动画关键帧
+// ==========================================
+// 这些动画定义在 animations.scss 中使用
+
+// 脉冲动画速度
+$pulse-duration: 2s;
+// 呼吸动画速度
+$breath-duration: 3s;
+// 流动动画速度
+$flow-duration: 4s;

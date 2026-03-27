@@ -93,7 +93,8 @@ export const useUserStore = defineStore('user', () => {
    * Check if user has specific permission
    */
   function hasPermission(permission: string): boolean {
-    if (role.value === 'sysadm') return true
+    // deepnet 和 sysadm 拥有所有权限
+    if (role.value === 'deepnet' || role.value === 'sysadm') return true
     return permissions.value.includes(permission)
   }
 
@@ -101,7 +102,8 @@ export const useUserStore = defineStore('user', () => {
    * Check if user has any of the specified permissions
    */
   function hasAnyPermission(perms: string[]): boolean {
-    if (role.value === 'sysadm') return true
+    // deepnet 和 sysadm 拥有所有权限
+    if (role.value === 'deepnet' || role.value === 'sysadm') return true
     return perms.some(p => permissions.value.includes(p))
   }
 
@@ -109,8 +111,23 @@ export const useUserStore = defineStore('user', () => {
    * Check if user has all of the specified permissions
    */
   function hasAllPermissions(perms: string[]): boolean {
-    if (role.value === 'sysadm') return true
+    // deepnet 和 sysadm 拥有所有权限
+    if (role.value === 'deepnet' || role.value === 'sysadm') return true
     return perms.every(p => permissions.value.includes(p))
+  }
+
+  /**
+   * Check if user is super admin (deepnet)
+   */
+  function isDeepnet(): boolean {
+    return role.value === 'deepnet'
+  }
+
+  /**
+   * Check if user has system-level access
+   */
+  function hasSystemLevelAccess(): boolean {
+    return role.value === 'deepnet'
   }
 
   /**
@@ -156,6 +173,8 @@ export const useUserStore = defineStore('user', () => {
     hasAnyPermission,
     hasAllPermissions,
     hasRole,
+    isDeepnet,
+    hasSystemLevelAccess,
     setToken,
     setUserInfo
   }
