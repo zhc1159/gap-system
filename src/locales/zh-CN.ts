@@ -48,7 +48,11 @@ export default {
     prev: '上一步',
     next: '下一步',
     editSuccess: '修改成功',
-    addSuccess: '添加成功'
+    addSuccess: '添加成功',
+    back: '返回',
+    ip: 'IP地址',
+    lastLogin: '最后登录',
+    updateSuccess: '更新成功'
   },
 
   // Login
@@ -210,6 +214,9 @@ export default {
       diagnostic: '网络诊断',
       configImport: '配置导入',
       systemOnOff: '系统开关'
+    },
+    login: {
+      clientManage: '客户端管理'
     }
   },
 
@@ -538,7 +545,18 @@ export default {
       manualUpdateConfirm: '确定要手动升级病毒库吗？',
       updateDisabled: '最近已经升级，请稍后...',
       uploadSuccess: '病毒库升级成功',
-      uploadFailed: '病毒库升级失败'
+      uploadFailed: '病毒库升级失败',
+      checking: '检查中...',
+      checkUpdate: '检查更新',
+      currentStatus: '当前状态',
+      lastUpdate: '最后更新',
+      status: '状态',
+      updateInterval: '更新间隔',
+      updateNow: '立即更新',
+      updateServer: '更新服务器',
+      updateSettings: '更新设置',
+      upToDate: '已是最新版本',
+      virusCount: '病毒数量'
     },
     configImport: {
       title: '配置导入',
@@ -720,7 +738,16 @@ export default {
     saveSuccess: '保存成功',
     testConnection: '测试连接',
     connectionSuccess: '连接成功',
-    connectionFailed: '连接失败'
+    connectionFailed: '连接失败',
+    confirmEnable: '确定要启用该功能吗？',
+    confirmDisable: '确定要禁用该功能吗？',
+    currentStatus: '当前状态',
+    enableAuth: '启用认证',
+    disableAuth: '禁用认证',
+    enabled: '已启用',
+    disabled: '已禁用',
+    operationSuccess: '操作成功',
+    operationFailed: '操作失败'
   },
 
   // Video Agent Module
@@ -731,18 +758,33 @@ export default {
     addTitle: '新增视频代理',
     editTitle: '编辑视频代理',
     deleteConfirm: '确定要删除该代理吗？',
+    addProxy: '添加代理',
     name: '代理名称',
+    proxyName: '代理名称',
+    namePlaceholder: '请输入代理名称',
     nameRequired: '代理名称不能为空',
     protocol: '协议',
     protocolRequired: '请选择协议',
+    mode: '模式',
+    proxy: '代理',
+    forward: '转发',
+    source: '源',
+    target: '目标',
     sourceIp: '源IP',
     sourceIpRequired: '源IP不能为空',
     targetIp: '目标IP',
     targetIpRequired: '目标IP不能为空',
+    ipPlaceholder: '请输入IP地址',
+    ipRequired: 'IP地址不能为空',
+    ipFormatError: 'IP地址格式不正确',
     sourcePort: '源端口',
     targetPort: '目标端口',
+    portRequired: '端口不能为空',
+    status: '状态',
     enabled: '已启用',
-    disabled: '已禁用'
+    disabled: '已禁用',
+    active: '已激活',
+    inactive: '未激活'
   },
 
   // AD Domain Module
@@ -751,16 +793,33 @@ export default {
     description: '配置Active Directory域',
     domainName: '域名',
     domainNameRequired: '域名不能为空',
+    domain: '域名',
+    domainPlaceholder: '请输入域名',
+    required: '此项为必填',
     domainController: '域控制器',
     dcRequired: '域控制器不能为空',
+    ipFormat: 'IP地址格式不正确',
+    ipHint: '请输入有效的IP地址',
+    ldapServer: 'LDAP服务器',
+    ldapServerPlaceholder: '请输入LDAP服务器地址',
     bindDn: '绑定DN',
     bindDnRequired: '绑定DN不能为空',
+    bindDN: '绑定DN',
+    bindDNPlaceholder: '请输入绑定DN',
     bindPassword: '绑定密码',
     bindPasswordRequired: '绑定密码不能为空',
+    bindDNPassword: '绑定密码',
+    bindDNPasswordPlaceholder: '请输入绑定密码',
     baseDn: '基础DN',
     baseDnRequired: '基础DN不能为空',
+    baseDN: '基础DN',
+    baseDNPlaceholder: '请输入基础DN',
     userFilter: '用户过滤器',
     groupFilter: '组过滤器',
+    save: '保存',
+    saving: '保存中...',
+    saveSuccess: '保存成功',
+    saveFailed: '保存失败',
     testSuccess: '测试连接成功',
     testFailed: '测试连接失败'
   },
@@ -773,25 +832,61 @@ export default {
     addTitle: '新增客户端',
     editTitle: '编辑客户端',
     deleteConfirm: '确定要删除该客户端吗？',
+    account: '账号',
     clientName: '客户端名称',
     clientNameRequired: '客户端名称不能为空',
     clientIp: '客户端IP',
     clientIpRequired: '客户端IP不能为空',
+    ip: 'IP地址',
+    ipRequired: 'IP地址不能为空',
     status: '状态',
-    lastSync: '最后同步'
+    lastSync: '最后同步',
+    group: '分组',
+    groupRequired: '请选择分组',
+    level: '密级',
+    topSecret: '绝密',
+    secret: '机密',
+    confidential: '秘密',
+    unclassified: '公开',
+    username: '用户名',
+    password: '密码',
+    passwordRequired: '密码不能为空',
+    confirmPassword: '确认密码',
+    confirmPasswordRequired: '请确认密码',
+    passwordMismatch: '两次密码不一致',
+    mac: 'MAC地址',
+    assignClient: '分配客户端',
+    assignTitle: '分配客户端权限',
+    assigned: '已分配',
+    notAssigned: '未分配',
+    assignSuccess: '分配成功',
+    syncUsers: '同步用户',
+    syncSuccess: '同步成功',
+    clientPermission: '客户端权限',
+    editClient: '编辑客户端'
   },
 
   // AD Domain Users Module
   adDomainUsers: {
     title: 'AD域用户',
     description: '管理AD域用户',
+    account: '账号',
     username: '用户名',
     displayName: '显示名称',
     email: '邮箱',
     groups: '所属组',
     status: '状态',
     lastLogin: '最后登录',
-    searchPlaceholder: '搜索用户名或邮箱'
+    searchPlaceholder: '搜索用户名或邮箱',
+    syncUsers: '同步用户',
+    syncSuccess: '同步成功',
+    assignAdmin: '分配管理员',
+    confirmAssign: '确定要分配管理员权限吗？',
+    assignSuccess: '分配成功',
+    editAdmin: '编辑管理员',
+    assigned: '已分配',
+    notAssigned: '未分配',
+    adminPermission: '管理员权限'
   },
 
   // Dashboard
@@ -1059,7 +1154,48 @@ export default {
     gapIneth: {
       title: '网络接口监控',
       description: '监控网络接口状态'
-    }
+    },
+    systemInfo: '系统信息',
+    '10min': '10分钟',
+    '1hour': '1小时',
+    '1day': '1天',
+    '1week': '1周',
+    '1month': '1月',
+    count: '数量',
+    cpuCoreToday: 'CPU核心(今日)',
+    cpuCoreWeek: 'CPU核心(本周)',
+    cpuInfo: 'CPU信息',
+    cpuMemRealtime: 'CPU/内存实时',
+    cpuUsage: 'CPU使用率',
+    cpuUserToday: 'CPU用户(今日)',
+    cpuUserWeek: 'CPU用户(本周)',
+    currentUsage: '当前使用',
+    direction: '方向',
+    diskUsage: '磁盘使用率',
+    external: '外网',
+    fetchError: '获取数据失败',
+    fileSyncSuccessCount: '文件同步成功数',
+    inbound: '入站',
+    interfaceName: '接口名称',
+    interfaceTraffic: '接口流量',
+    internal: '内网',
+    license: '许可证',
+    memInfo: '内存信息',
+    memMax: '内存最大',
+    memMean: '内存平均',
+    memMin: '内存最小',
+    memUsage: '内存使用率',
+    networkRate: '网络速率',
+    outbound: '出站',
+    policyName: '策略名称',
+    region: '区域',
+    startTime: '启动时间',
+    successCount: '成功数',
+    sync: '同步',
+    timeRange: '时间范围',
+    total: '总计',
+    totalFileSize: '总文件大小',
+    uptime: '运行时间'
   },
 
   // NAT地址转换模块
@@ -1234,7 +1370,35 @@ export default {
       editRule: '编辑规则',
       virtualSource: '虚拟源地址',
       virtualSourceRequired: 'SNAT动作需要填写虚拟源地址',
-      deleteConfirm: '确定要删除该规则吗？'
+      deleteConfirm: '确定要删除该规则吗？',
+      ruleName: '规则名称',
+      ruleNamePlaceholder: '请输入规则名称',
+      ruleNameRequired: '规则名称不能为空',
+      ruleNameMaxLength: '规则名称不能超过31个字符',
+      ruleNamePattern: '规则名称只能包含字母、数字、下划线',
+      protocol: '协议',
+      sourceAddress: '源地址',
+      sourcePort: '源端口',
+      destAddress: '目的地址',
+      destPort: '目的端口',
+      outInterface: '出口接口',
+      selectInterface: '请选择出口接口',
+      interfaces: '接口',
+      action: '动作',
+      actionRequired: '请选择动作',
+      snat: 'SNAT',
+      masquerade: '伪装',
+      virtualSourceAddr: '虚拟源地址',
+      virtualSourcePort: '虚拟源端口',
+      direction: '方向',
+      directionRequired: '请选择方向',
+      selectDirection: '请选择方向',
+      inToOut: '内到外',
+      outToIn: '外到内',
+      enabledRules: '已启用规则',
+      disabledRules: '已禁用规则',
+      enabledStatus: '启用状态',
+      totalRules: '共{count}条规则'
     },
     destNat: {
       title: '目的地址转换',
@@ -1242,31 +1406,139 @@ export default {
       addRule: '添加规则',
       editRule: '编辑规则',
       virtualDest: '虚拟目的地址',
-      deleteConfirm: '确定要删除该规则吗？'
+      deleteConfirm: '确定要删除该规则吗？',
+      ruleName: '规则名称',
+      ruleNamePlaceholder: '请输入规则名称',
+      ruleNameRequired: '规则名称不能为空',
+      ruleNameMaxLength: '规则名称不能超过31个字符',
+      ruleNamePattern: '规则名称只能包含字母、数字、下划线',
+      protocol: '协议',
+      sourceAddress: '源地址',
+      sourcePort: '源端口',
+      inInterface: '入口接口',
+      selectInterface: '请选择入口接口',
+      interfaces: '接口',
+      destVirtualAddress: '目的虚拟地址',
+      destVirtualPort: '目的虚拟端口',
+      toDestAddress: '转换后目的地址',
+      toDestPort: '转换后目的端口',
+      toDestPlaceholder: '请输入转换后地址',
+      toDestRequired: '转换后地址不能为空',
+      ipPlaceholder: '请输入IP地址',
+      portPlaceholder: '请输入端口',
+      direction: '方向',
+      directionRequired: '请选择方向',
+      selectDirection: '请选择方向',
+      inToOut: '内到外',
+      outToIn: '外到内',
+      enabledRules: '已启用规则',
+      disabledRules: '已禁用规则',
+      enabledStatus: '启用状态',
+      totalRules: '共{count}条规则'
     },
     outNat: {
       title: '出站NAT',
-      description: '配置出站NAT规则'
+      description: '配置出站NAT规则',
+      addSourceNat: '添加源NAT',
+      addDestNat: '添加目的NAT',
+      editSourceNat: '编辑源NAT',
+      editDestNat: '编辑目的NAT',
+      deleteConfirm: '确定要删除该规则吗？',
+      sourceNat: '源NAT',
+      destNat: '目的NAT',
+      ruleName: '规则名称',
+      ruleNamePlaceholder: '请输入规则名称',
+      srcAddress: '源地址',
+      srcPort: '源端口',
+      destAddress: '目的地址',
+      destPort: '目的端口',
+      virtualSrcAddress: '虚拟源地址',
+      virtualSrcPort: '虚拟源端口',
+      destVirtualAddress: '目的虚拟地址',
+      destVirtualPort: '目的虚拟端口',
+      action: '动作'
     },
     inSourceNat: {
       title: '入站源NAT',
-      description: '配置入站源地址转换'
+      description: '配置入站源地址转换',
+      addRule: '添加规则',
+      editRule: '编辑规则',
+      ruleName: '规则名称',
+      ruleNamePlaceholder: '请输入规则名称',
+      ruleNameRequired: '规则名称不能为空',
+      ruleNameMaxLength: '规则名称不能超过31个字符',
+      ruleNamePattern: '规则名称只能包含字母、数字、下划线',
+      protocol: '协议',
+      sourceAddress: '源地址',
+      sourcePort: '源端口',
+      destAddress: '目的地址',
+      destPort: '目的端口',
+      outInterface: '出口接口',
+      selectInterface: '请选择出口接口',
+      action: '动作',
+      actionRequired: '请选择动作',
+      snat: 'SNAT',
+      masquerade: '伪装',
+      virtualSourceAddr: '虚拟源地址',
+      virtualSourcePort: '虚拟源端口',
+      virtualSourceRequired: 'SNAT动作需要填写虚拟源地址'
     },
     inDestNat: {
       title: '入站目的NAT',
-      description: '配置入站目的地址转换'
+      description: '配置入站目的地址转换',
+      addRule: '添加规则',
+      editRule: '编辑规则',
+      ruleName: '规则名称',
+      ruleNamePlaceholder: '请输入规则名称',
+      ruleNameRequired: '规则名称不能为空',
+      ruleNameMaxLength: '规则名称不能超过31个字符',
+      ruleNamePattern: '规则名称只能包含字母、数字、下划线',
+      protocol: '协议',
+      sourceAddress: '源地址',
+      sourcePort: '源端口',
+      inInterface: '入口接口',
+      selectInterface: '请选择入口接口',
+      destVirtualAddress: '目的虚拟地址',
+      destVirtualPort: '目的虚拟端口',
+      toDestAddress: '转换后目的地址',
+      toDestPort: '转换后目的端口',
+      toDestRequired: '转换后地址不能为空'
     },
     outSourceNat: {
       title: '出站源NAT',
-      description: '配置出站源地址转换'
+      description: '配置出站源地址转换',
+      addRule: '添加规则',
+      editRule: '编辑规则',
+      deleteConfirm: '确定要删除该规则吗？',
+      ruleName: '规则名称',
+      ruleNamePlaceholder: '请输入规则名称',
+      srcAddress: '源地址',
+      srcPort: '源端口',
+      destAddress: '目的地址',
+      destPort: '目的端口',
+      virtualSrcAddress: '虚拟源地址',
+      virtualSrcPort: '虚拟源端口',
+      action: '动作'
     },
     outDestNat: {
       title: '出站目的NAT',
-      description: '配置出站目的地址转换'
+      description: '配置出站目的地址转换',
+      addRule: '添加规则',
+      editRule: '编辑规则',
+      deleteConfirm: '确定要删除该规则吗？',
+      ruleName: '规则名称',
+      ruleNamePlaceholder: '请输入规则名称',
+      srcAddress: '源地址',
+      srcPort: '源端口',
+      destAddress: '目的地址',
+      destPort: '目的端口',
+      destVirtualAddress: '目的虚拟地址',
+      destVirtualPort: '目的虚拟端口'
     },
     ipGroup: {
       title: 'IP地址组',
       description: '管理IP地址组',
+      add: '添加',
       addGroup: '添加IP组',
       editGroup: '编辑IP组',
       groupName: '组名称',
@@ -1274,10 +1546,15 @@ export default {
       groupNameRequired: '组名称不能为空',
       groupNameMaxLength: '组名称不能超过31个字符',
       groupNamePattern: '组名称只能包含字母、数字、下划线',
+      ipGroup: 'IP组',
       ipAddress: 'IP地址',
       ipRequired: 'IP地址不能为空',
       ipPlaceholder: '输入IP地址后按回车添加',
       ipHint: '支持IPv4、IPv6、CIDR、IP范围、域名',
+      ipHelp: '支持IPv4、IPv6、CIDR、IP范围、域名',
+      ipDuplicate: 'IP地址已存在',
+      ipEmpty: 'IP地址不能为空',
+      ipInvalid: 'IP地址格式不正确',
       deleteConfirm: '确定要删除该IP组吗？'
     },
     portGroup: {
@@ -1286,9 +1563,19 @@ export default {
       addGroup: '添加端口组',
       editGroup: '编辑端口组',
       groupName: '组名称',
+      groupNamePlaceholder: '请输入组名称',
+      groupNameRequired: '组名称不能为空',
+      groupNameMaxLength: '组名称不能超过31个字符',
+      groupNamePattern: '组名称只能包含字母、数字、下划线',
+      port: '端口',
       portRequired: '端口不能为空',
       portPlaceholder: '输入端口后按回车添加',
-      portHint: '支持单个端口或端口范围，如 80 或 8080-8090'
+      portHelp: '支持单个端口或端口范围，如 80 或 8080-8090',
+      portHint: '支持单个端口或端口范围，如 80 或 8080-8090',
+      portFormatInvalid: '端口格式不正确',
+      portRangeInvalid: '端口范围无效',
+      portRangeOrder: '起始端口不能大于结束端口',
+      deleteConfirm: '确定要删除该端口组吗？'
     }
   },
 
@@ -1421,10 +1708,16 @@ export default {
     editTitle: '编辑后缀过滤规则',
     deleteConfirm: '确定要删除该规则吗？',
     username: '用户名',
+    usernamePlaceholder: '请输入用户名',
+    usernameRequired: '用户名不能为空',
+    fileSuffix: '文件后缀',
     suffix: '后缀',
     suffixPlaceholder: '如 .exe .dll',
     suffixRequired: '后缀不能为空',
+    suffixesRequired: '后缀不能为空',
     filterMode: '过滤模式',
+    whitelist: '白名单',
+    blacklist: '黑名单',
     accept: '允许',
     reject: '拒绝'
   },
@@ -1513,5 +1806,188 @@ export default {
     syncIntervalRequired: '同步间隔不能为空',
     enabled: '已启用',
     disabled: '已禁用'
+  },
+
+  // Rules Module
+  rules: {
+    title: '规则管理',
+    add: '添加规则',
+    addTitle: '新增规则',
+    editTitle: '编辑规则',
+    deleteConfirm: '确定要删除该规则吗？',
+    ruleName: '规则名称',
+    namePlaceholder: '请输入规则名称',
+    nameRequired: '规则名称不能为空',
+    direction: '方向',
+    directionRequired: '请选择方向',
+    inbound: '入站',
+    outbound: '出站',
+    protocol: '协议',
+    protocolRequired: '请选择协议',
+    sourceDb: '源数据库',
+    targetDb: '目标数据库',
+    sourcePath: '源路径',
+    targetPath: '目标路径',
+    permission: '权限',
+    syncMode: '同步模式',
+    status: '状态',
+    createTime: '创建时间',
+    pathConf: {
+      description: '配置文件传输路径'
+    },
+    databasePolicy: {
+      description: '配置数据库同步策略'
+    }
+  },
+
+  // Modbus Protocol Module
+  modbus: {
+    title: 'Modbus协议',
+    dialog: {
+      addTitle: '新增Modbus规则',
+      editTitle: '编辑Modbus规则'
+    },
+    form: {
+      switch: '开关',
+      status: '状态',
+      userGroup: '用户组',
+      selectUserGroup: '选择用户组',
+      signalBlacklist: '信号黑名单',
+      type: '类型',
+      address: '地址',
+      startValue: '起始值',
+      endValue: '结束值',
+      on: '开',
+      off: '关',
+      coilControl: '线圈控制',
+      registerControl: '寄存器控制',
+      selectSignal: '选择信号'
+    },
+    table: {
+      add: '添加',
+      edit: '编辑',
+      delete: '删除',
+      status: '状态',
+      userGroup: '用户组',
+      signalBlacklist: '信号黑名单',
+      viewDetails: '查看详情'
+    },
+    message: {
+      addSuccess: '添加成功',
+      editSuccess: '编辑成功',
+      deleteSuccess: '删除成功',
+      deleteConfirm: '确定要删除该规则吗？'
+    },
+    types: {
+      coil: '线圈',
+      register: '寄存器'
+    }
+  },
+
+  // OPC UA Protocol Module
+  opcua: {
+    title: 'OPC UA协议',
+    warning: '警告',
+    dialog: {
+      addTitle: '新增OPC UA规则',
+      editTitle: '编辑OPC UA规则'
+    },
+    form: {
+      switch: '开关',
+      userGroup: '用户组',
+      selectUserGroup: '选择用户组',
+      signalBlacklist: '信号黑名单',
+      selectSignal: '选择信号'
+    },
+    table: {
+      add: '添加',
+      edit: '编辑',
+      delete: '删除',
+      status: '状态',
+      userGroup: '用户组',
+      signalBlacklist: '信号黑名单'
+    },
+    message: {
+      addSuccess: '添加成功',
+      editSuccess: '编辑成功',
+      deleteSuccess: '删除成功',
+      deleteConfirm: '确定要删除该规则吗？'
+    }
+  },
+
+  // S7 Protocol Module
+  s7: {
+    title: 'S7协议',
+    dialog: {
+      addTitle: '新增S7规则',
+      editTitle: '编辑S7规则'
+    },
+    steps: {
+      basic: '基本配置',
+      readControl: '读取控制',
+      writeControl: '写入控制'
+    },
+    form: {
+      switch: '开关',
+      userGroup: '用户组',
+      protocolExt: '协议扩展',
+      jobBlacklist: '作业黑名单',
+      ackBlacklist: '确认黑名单',
+      userdataBlacklist: '用户数据黑名单'
+    },
+    table: {
+      add: '添加',
+      edit: '编辑',
+      delete: '删除',
+      status: '状态',
+      userGroup: '用户组',
+      protocolExt: '协议扩展',
+      viewDetails: '查看详情'
+    },
+    dataConfig: {
+      dataBlock: '数据块',
+      dbIndex: 'DB索引',
+      startAddr: '起始地址',
+      endAddr: '结束地址',
+      hexPlaceholder: '请输入十六进制值',
+      noLimit: '无限制',
+      readFilter: '读取过滤',
+      writeFilter: '写入过滤',
+      whitelist: '白名单',
+      blacklist: '黑名单'
+    },
+    userdata: {
+      szl: 'SZL',
+      security: '安全',
+      clock: '时钟',
+      blocksInfo: '块信息'
+    },
+    message: {
+      addSuccess: '添加成功',
+      editSuccess: '编辑成功',
+      deleteSuccess: '删除成功',
+      deleteConfirm: '确定要删除该规则吗？'
+    }
+  },
+
+  // OTP Module
+  otp: {
+    title: 'OTP配置',
+    add: '添加OTP',
+    edit: '编辑',
+    delete: '删除',
+    deleteConfirm: '确定要删除该OTP配置吗？',
+    deleteSuccess: '删除成功',
+    saveSuccess: '保存成功',
+    username: '用户名',
+    usernamePlaceholder: '请输入用户名',
+    userType: '用户类型',
+    admin: '管理员',
+    client: '客户端',
+    codeLength: '编码长度',
+    digits: '位数',
+    qrcode: '二维码',
+    scanHint: '请使用OTP应用扫描二维码',
+    action: '操作'
   }
 }
