@@ -635,6 +635,165 @@ export default {
     }
   },
 
+  // Security Policy Module
+  securityPolicy: {
+    common: {
+      title: '安全策略',
+      direction: {
+        in: '入站',
+        out: '出站'
+      },
+      status: {
+        running: '运行中',
+        stopped: '已停止'
+      },
+      form: {
+        title: '安全策略配置',
+        modeName: '规则名称',
+        modeNamePlaceholder: '请输入规则名称',
+        protocol: '协议',
+        source: '源地址',
+        destination: '目的地址',
+        destinationPort: '目的端口',
+        inInterface: '入接口',
+        inDevice: '入设备',
+        inDevicePort: '入设备端口',
+        timeGroup: '时间组',
+        timeGroupPlaceholder: '选择时间组（可选）'
+      },
+      table: {
+        name: '规则名称',
+        protocol: '协议',
+        source: '源地址',
+        destination: '目的地址',
+        destinationPort: '目的端口',
+        inDevicePort: '设备端口'
+      },
+      validation: {
+        modeNameRequired: '请输入规则名称',
+        protocolRequired: '请选择协议',
+        sourceRequired: '请选择源地址',
+        destinationRequired: '请选择目的地址',
+        destinationPortRequired: '请输入目的端口',
+        inInterfaceRequired: '请选择入接口',
+        inDeviceRequired: '请输入入设备',
+        inDevicePortRequired: '请输入入设备端口'
+      },
+      messages: {
+        confirmDelete: '确定要删除该规则吗？',
+        toggleSuccess: '状态切换成功'
+      }
+    },
+    databaseAccess: {
+      title: '数据库访问控制',
+      description: '配置数据库访问策略'
+    },
+    fileAccess: {
+      title: '文件访问控制',
+      description: '配置文件访问策略'
+    }
+  },
+
+  // Auth Function Module
+  authFun: {
+    title: '认证功能配置',
+    description: '配置系统认证功能',
+    adDomain: 'AD域配置',
+    adDomainClient: 'AD域客户端',
+    adDomainUsers: 'AD域用户',
+    otp: 'OTP配置',
+    otpEnable: '启用OTP',
+    otpSecret: 'OTP密钥',
+    otpAlgorithm: 'OTP算法',
+    otpDigits: 'OTP位数',
+    otpInterval: 'OTP间隔',
+    ldap: 'LDAP配置',
+    ldapServer: 'LDAP服务器',
+    ldapPort: 'LDAP端口',
+    ldapBindDn: '绑定DN',
+    ldapBaseDn: '基础DN',
+    ldapFilter: '过滤器',
+    radius: 'RADIUS配置',
+    radiusServer: 'RADIUS服务器',
+    radiusSecret: 'RADIUS密钥',
+    radiusTimeout: '超时时间',
+    saveSuccess: '保存成功',
+    testConnection: '测试连接',
+    connectionSuccess: '连接成功',
+    connectionFailed: '连接失败'
+  },
+
+  // Video Agent Module
+  videoAgent: {
+    title: '视频代理',
+    description: '配置视频代理规则',
+    add: '添加代理',
+    addTitle: '新增视频代理',
+    editTitle: '编辑视频代理',
+    deleteConfirm: '确定要删除该代理吗？',
+    name: '代理名称',
+    nameRequired: '代理名称不能为空',
+    protocol: '协议',
+    protocolRequired: '请选择协议',
+    sourceIp: '源IP',
+    sourceIpRequired: '源IP不能为空',
+    targetIp: '目标IP',
+    targetIpRequired: '目标IP不能为空',
+    sourcePort: '源端口',
+    targetPort: '目标端口',
+    enabled: '已启用',
+    disabled: '已禁用'
+  },
+
+  // AD Domain Module
+  adDomain: {
+    title: 'AD域配置',
+    description: '配置Active Directory域',
+    domainName: '域名',
+    domainNameRequired: '域名不能为空',
+    domainController: '域控制器',
+    dcRequired: '域控制器不能为空',
+    bindDn: '绑定DN',
+    bindDnRequired: '绑定DN不能为空',
+    bindPassword: '绑定密码',
+    bindPasswordRequired: '绑定密码不能为空',
+    baseDn: '基础DN',
+    baseDnRequired: '基础DN不能为空',
+    userFilter: '用户过滤器',
+    groupFilter: '组过滤器',
+    testSuccess: '测试连接成功',
+    testFailed: '测试连接失败'
+  },
+
+  // AD Domain Client Module
+  adDomainClient: {
+    title: 'AD域客户端',
+    description: '管理AD域客户端',
+    add: '添加客户端',
+    addTitle: '新增客户端',
+    editTitle: '编辑客户端',
+    deleteConfirm: '确定要删除该客户端吗？',
+    clientName: '客户端名称',
+    clientNameRequired: '客户端名称不能为空',
+    clientIp: '客户端IP',
+    clientIpRequired: '客户端IP不能为空',
+    status: '状态',
+    lastSync: '最后同步'
+  },
+
+  // AD Domain Users Module
+  adDomainUsers: {
+    title: 'AD域用户',
+    description: '管理AD域用户',
+    username: '用户名',
+    displayName: '显示名称',
+    email: '邮箱',
+    groups: '所属组',
+    status: '状态',
+    lastLogin: '最后登录',
+    searchPlaceholder: '搜索用户名或邮箱'
+  },
+
   // Dashboard
   dashboard: {
     resourceUsage: '资源使用率',
