@@ -1,0 +1,140 @@
+// ===========================================
+// GAP System - Global Theme Variables
+// 科技感设计规范 - Tech-Inspired Design System
+// ===========================================
+
+// ==========================================
+// Primary Colors - 主题色
+// ==========================================
+$primary-color: #00d4ff;           // 青色 Cyan - 主色
+$primary-light: #33ddff;           // 浅青色
+$primary-dark: #00a8cc;            // 深青色
+
+$secondary-color: #6366f1;         // 紫色 Purple - 辅助色
+$secondary-light: #818cf8;
+$secondary-dark: #4f46e5;
+
+// ==========================================
+// Background Colors - 背景色 (适中亮度)
+// ==========================================
+$bg-primary: #1a2332;              // 主背景 - 深蓝灰
+$bg-secondary: #243447;            // 次背景
+$bg-card: #1e293b;                 // 卡片背景
+$bg-darker: #0f172a;               // 更深背景
+$bg-darkest: #020617;              // 最深背景
+$bg-hover: #334155;                // 悬停背景
+
+// ==========================================
+// Text Colors - 文字色
+// ==========================================
+$text-primary: #f1f5f9;            // 主要文字
+$text-secondary: #cbd5e1;          // 次要文字
+$text-muted: #64748b;              // 弱化文字
+$text-placeholder: #475569;        // 占位文字
+
+// ==========================================
+// Status Colors - 状态色
+// ==========================================
+$success-color: #10b981;           // 成功 - 绿色
+$success-light: #34d399;
+$warning-color: #f59e0b;           // 警告 - 橙色
+$warning-light: #fbbf24;
+$danger-color: #ef4444;            // 危险 - 红色
+$danger-light: #f87171;
+$info-color: #06b6d4;              // 信息 - 青色
+$info-light: #22d3ee;
+
+// ==========================================
+// Border Colors - 边框色
+// ==========================================
+$border-color: #334155;            // 默认边框
+$border-light: #475569;            // 浅边框
+$border-dark: #1e293b;             // 深边框
+$border-focus: $primary-color;     // 聚焦边框
+
+// ==========================================
+// Gradients - 渐变色
+// ==========================================
+$gradient-primary: linear-gradient(135deg, #00d4ff 0%, #6366f1 100%);
+$gradient-secondary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+$gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+$gradient-warning: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+$gradient-danger: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+$gradient-dark: linear-gradient(180deg, $bg-primary 0%, $bg-darker 100%);
+$gradient-header: linear-gradient(90deg, $bg-darker 0%, $bg-card 100%);
+
+// ==========================================
+// Shadows - 阴影
+// ==========================================
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+// 发光效果 - Glow Effects
+$shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
+$shadow-glow-strong: 0 0 40px rgba(0, 212, 255, 0.5);
+$shadow-glow-purple: 0 0 20px rgba(99, 102, 241, 0.3);
+
+// ==========================================
+// Spacing - 间距
+// ==========================================
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+
+// ==========================================
+// Border Radius - 圆角
+// ==========================================
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-2xl: 24px;
+$radius-full: 9999px;
+
+// ==========================================
+// Typography - 字体
+// ==========================================
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+$font-family-mono: 'SF Mono', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+$font-size-xs: 12px;
+$font-size-sm: 13px;
+$font-size-base: 14px;
+$font-size-md: 15px;
+$font-size-lg: 16px;
+$font-size-xl: 18px;
+$font-size-2xl: 20px;
+$font-size-3xl: 24px;
+$font-size-4xl: 28px;
+$font-size-5xl: 32px;
+
+// ==========================================
+// Transitions - 动画过渡
+// ==========================================
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// ==========================================
+// Z-Index - 层级
+// ==========================================
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// ==========================================
+// Layout - 布局
+// ==========================================
+$header-height: 60px;
+$sidebar-width: 220px;
+$sidebar-collapsed-width: 64px;
+$footer-height: 40px;

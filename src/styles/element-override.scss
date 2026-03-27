@@ -1,0 +1,332 @@
+// ===========================================
+// GAP System - Element Plus Theme Override
+// ===========================================
+
+// Button Styles
+.el-button {
+  font-weight: 500;
+  border-radius: $radius-md;
+  transition: all $transition-fast;
+
+  &--primary {
+    background: $gradient-primary;
+    border: none;
+    box-shadow: $shadow-glow;
+
+    &:hover,
+    &:focus {
+      background: $gradient-primary;
+      opacity: 0.9;
+      box-shadow: $shadow-glow-strong;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &--default {
+    background: $bg-card;
+    border-color: $border-color;
+    color: $text-primary;
+
+    &:hover,
+    &:focus {
+      background: $bg-hover;
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+}
+
+// Input Styles
+.el-input {
+  .el-input__wrapper {
+    background: $bg-card;
+    border: 1px solid $border-color;
+    border-radius: $radius-md;
+    box-shadow: none;
+    transition: all $transition-fast;
+
+    &:hover {
+      border-color: $border-light;
+    }
+
+    &.is-focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+    }
+  }
+
+  .el-input__inner {
+    color: $text-primary;
+
+    &::placeholder {
+      color: $text-placeholder;
+    }
+  }
+
+  .el-input__prefix,
+  .el-input__suffix {
+    color: $text-muted;
+  }
+}
+
+// Select Styles
+.el-select {
+  .el-select__wrapper {
+    background: $bg-card;
+    border: 1px solid $border-color;
+    border-radius: $radius-md;
+    box-shadow: none;
+
+    &:hover {
+      border-color: $border-light;
+    }
+
+    &.is-focused {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+    }
+  }
+
+  .el-select__input {
+    color: $text-primary;
+  }
+
+  .el-select__placeholder {
+    color: $text-placeholder;
+  }
+}
+
+// Table Styles
+.el-table {
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: rgba(0, 212, 255, 0.1);
+  --el-table-row-hover-bg-color: rgba(0, 212, 255, 0.08);
+  --el-table-border-color: #{$border-color};
+  --el-table-text-color: #{$text-primary};
+  --el-table-header-text-color: #{$primary-color};
+
+  background: transparent;
+  border-radius: $radius-lg;
+  overflow: hidden;
+
+  th.el-table__cell {
+    background: rgba(0, 212, 255, 0.1);
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+  td.el-table__cell {
+    background: transparent;
+    color: $text-primary;
+  }
+
+  .el-table__inner-wrapper::before {
+    display: none;
+  }
+}
+
+// Card Styles
+.el-card {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+  transition: all $transition-normal;
+
+  &:hover {
+    box-shadow: $shadow-lg;
+    border-color: rgba(0, 212, 255, 0.3);
+  }
+
+  .el-card__header {
+    border-bottom: 1px solid $border-color;
+    color: $text-primary;
+    font-weight: 600;
+  }
+
+  .el-card__body {
+    color: $text-secondary;
+  }
+}
+
+// Dialog Styles
+.el-dialog {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-xl;
+
+  .el-dialog__header {
+    border-bottom: 1px solid $border-color;
+
+    .el-dialog__title {
+      color: $text-primary;
+      font-weight: 600;
+    }
+  }
+
+  .el-dialog__body {
+    color: $text-secondary;
+  }
+
+  .el-dialog__footer {
+    border-top: 1px solid $border-color;
+  }
+}
+
+// Form Styles
+.el-form-item {
+  .el-form-item__label {
+    color: $text-secondary;
+    font-weight: 500;
+  }
+}
+
+// Message Box Styles
+.el-message-box {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: $radius-xl;
+
+  .el-message-box__title {
+    color: $text-primary;
+  }
+
+  .el-message-box__content {
+    color: $text-secondary;
+  }
+}
+
+// Dropdown Styles
+.el-dropdown-menu {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  box-shadow: $shadow-lg;
+
+  .el-dropdown-menu__item {
+    color: $text-primary;
+
+    &:hover {
+      background: $bg-hover;
+      color: $primary-color;
+    }
+  }
+}
+
+// Pagination Styles
+.el-pagination {
+  --el-pagination-bg-color: #{$bg-card};
+  --el-pagination-text-color: #{$text-secondary};
+  --el-pagination-button-disabled-bg-color: #{$bg-darker};
+  --el-pagination-hover-color: #{$primary-color};
+
+  .el-pager li {
+    background: $bg-card;
+    border: 1px solid $border-color;
+    border-radius: $radius-sm;
+    margin: 0 2px;
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    &.is-active {
+      background: $gradient-primary;
+      border-color: transparent;
+    }
+  }
+}
+
+// Tag Styles
+.el-tag {
+  border-radius: $radius-sm;
+
+  &--success {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: $success-light;
+  }
+
+  &--warning {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.3);
+    color: $warning-light;
+  }
+
+  &--danger {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: $danger-light;
+  }
+
+  &--info {
+    background: rgba(6, 182, 212, 0.2);
+    border-color: rgba(6, 182, 212, 0.3);
+    color: $info-light;
+  }
+}
+
+// Tooltip Styles
+.el-tooltip__popper {
+  background: $bg-darker !important;
+  border: 1px solid $border-color;
+  color: $text-primary;
+  border-radius: $radius-md;
+}
+
+// Loading Styles
+.el-loading-mask {
+  background: rgba(15, 23, 42, 0.8);
+
+  .el-loading-spinner {
+    .circular {
+      stroke: $primary-color;
+    }
+
+    .el-loading-text {
+      color: $primary-color;
+    }
+  }
+}
+
+// Menu Styles (for Sidebar)
+.el-menu {
+  background: transparent;
+  border: none;
+
+  .el-menu-item,
+  .el-sub-menu__title {
+    color: $text-secondary;
+
+    &:hover {
+      background: rgba(0, 212, 255, 0.1);
+      color: $primary-color;
+    }
+  }
+
+  .el-menu-item.is-active {
+    background: $gradient-primary;
+    color: white;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: $primary-color;
+      box-shadow: 0 0 10px $primary-color;
+    }
+  }
+
+  .el-sub-menu.is-active > .el-sub-menu__title {
+    color: $primary-color;
+  }
+}
