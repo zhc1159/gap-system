@@ -116,6 +116,13 @@ export default {
       system: '系统状态',
       traffic: '流量统计'
     },
+    supervise: {
+      title: '状态监控',
+      sysInfo: '系统信息',
+      gapDip: '设备IP监控',
+      gapFileSync: '文件同步监控',
+      gapIneth: '网络接口监控'
+    },
     system: {
       title: '系统管理',
       config: '系统配置',
@@ -131,7 +138,46 @@ export default {
     },
     security: {
       title: '安全策略',
-      access: '访问控制'
+      access: '访问控制',
+      databaseAccess: '数据库访问',
+      fileAccess: '文件访问'
+    },
+    transparentRule: {
+      title: '透明规则',
+      input: '入站规则',
+      forward: '转发规则',
+      ipGroup: 'IP地址组',
+      portGroup: '端口组',
+      timeGroup: '时间组'
+    },
+    nat: {
+      title: '地址转换',
+      sourceNat: '源地址转换',
+      destNat: '目的地址转换',
+      outNat: '出站NAT',
+      inSourceNat: '入站源NAT',
+      inDestNat: '入站目的NAT',
+      outSourceNat: '出站源NAT',
+      outDestNat: '出站目的NAT',
+      ipGroup: '转换IP组',
+      portGroup: '转换端口组'
+    },
+    opc: {
+      title: '工控代理',
+      modbus: 'Modbus协议',
+      opcua: 'OPC UA协议',
+      s7: 'S7协议'
+    },
+    rules: {
+      title: '规则管理',
+      landingZone: '落地区配置',
+      pathConf: '路径配置',
+      databaseShow: '数据库同步',
+      databasePolicy: '数据库策略',
+      antivirus: '病毒过滤',
+      keyFilter: '关键字过滤',
+      suffixFilter: '后缀过滤',
+      mac: 'MAC访问控制'
     },
     audit: {
       title: '审计日志',
@@ -143,8 +189,16 @@ export default {
     maintenance: {
       title: '系统维护',
       backup: '配置备份',
+      profileBackup: '配置文件备份',
+      loadProfile: '加载配置',
       upgrade: '系统升级',
-      diagnose: '诊断工具'
+      systemUpdate: '系统更新',
+      antivirus: '病毒库更新',
+      license: '许可证管理',
+      diagnose: '诊断工具',
+      diagnostic: '网络诊断',
+      configImport: '配置导入',
+      systemOnOff: '系统开关'
     }
   },
 
@@ -808,6 +862,170 @@ export default {
       ipInvalid: '请输入有效的IP地址',
       authMethodRequired: '请选择认证方式',
       initialPwdRequired: '请输入初始密码'
+    }
+  },
+
+  // 新增模块翻译 - New Module Translations
+
+  // 状态监控模块
+  supervise: {
+    sysInfo: {
+      title: '系统信息',
+      description: '查看系统详细信息'
+    },
+    gapDip: {
+      title: '设备IP监控',
+      description: '监控设备IP状态',
+      serverIP: '服务器IP',
+      txBytes: '发送字节',
+      rxBytes: '接收字节',
+      totalBytes: '总字节',
+      newSessions: '新会话数'
+    },
+    gapFileSync: {
+      title: '文件同步监控',
+      description: '监控文件同步状态'
+    },
+    gapIneth: {
+      title: '网络接口监控',
+      description: '监控网络接口状态'
+    }
+  },
+
+  // NAT地址转换模块
+  natModule: {
+    sourceNat: {
+      title: '源地址转换',
+      description: '配置源NAT规则',
+      ruleName: '规则名称',
+      action: '动作',
+      virtualSource: '虚拟源地址'
+    },
+    destNat: {
+      title: '目的地址转换',
+      description: '配置目的NAT规则'
+    },
+    outNat: {
+      title: '出站NAT',
+      description: '配置出站NAT规则'
+    },
+    ipGroup: {
+      title: '转换IP组',
+      description: '管理转换IP组'
+    },
+    portGroup: {
+      title: '转换端口组',
+      description: '管理转换端口组'
+    }
+  },
+
+  // 工控代理模块
+  opcModule: {
+    modbus: {
+      title: 'Modbus协议',
+      description: '配置Modbus工控协议代理'
+    },
+    opcua: {
+      title: 'OPC UA协议',
+      description: '配置OPC UA工控协议代理'
+    },
+    s7: {
+      title: 'S7协议',
+      description: '配置S7工控协议代理'
+    }
+  },
+
+  // 规则管理模块
+  rulesModule: {
+    landingZone: {
+      title: '落地区配置',
+      description: '配置文件摆渡落地区',
+      nameRequired: '请输入名称',
+      pathRequired: '请输入路径',
+      storageRequired: '请输入存储容量'
+    },
+    pathConf: {
+      title: '路径配置',
+      description: '配置文件传输路径',
+      sourcePath: '源路径',
+      targetPath: '目标路径',
+      permission: '权限'
+    },
+    antivirus: {
+      title: '病毒过滤',
+      description: '配置病毒扫描规则'
+    },
+    keyFilter: {
+      title: '关键字过滤',
+      description: '配置内容关键字过滤'
+    },
+    suffixFilter: {
+      title: '后缀过滤',
+      description: '配置文件后缀过滤'
+    },
+    databaseShow: {
+      title: '数据库同步',
+      description: '配置数据库同步规则',
+      connectionSuccess: '连接成功'
+    },
+    databasePolicy: {
+      title: '数据库策略',
+      description: '配置数据库同步策略'
+    }
+  },
+
+  // 系统维护扩展
+  maintenanceExt: {
+    antivirus: {
+      title: '病毒库更新',
+      description: '更新病毒特征库',
+      currentStatus: '当前状态',
+      version: '版本',
+      lastUpdate: '最后更新',
+      virusCount: '病毒数量',
+      updateSettings: '更新设置',
+      autoUpdate: '自动更新',
+      updateServer: '更新服务器',
+      updateInterval: '更新间隔',
+      updateNow: '立即更新',
+      checkUpdate: '检查更新'
+    },
+    configImport: {
+      title: '配置导入',
+      description: '导入系统配置'
+    },
+    diagnosticTools: {
+      title: '诊断工具',
+      description: '网络诊断工具',
+      ping: 'Ping',
+      traceroute: '路由追踪',
+      arp: 'ARP表',
+      tcpdump: '抓包',
+      tcping: 'TCPing'
+    },
+    license: {
+      title: '许可证管理',
+      description: '管理系统许可证',
+      deviceCode: '设备码',
+      uploadLicense: '上传许可证'
+    },
+    loadProfile: {
+      title: '加载配置',
+      description: '加载配置文件'
+    },
+    profileBackup: {
+      title: '配置文件备份',
+      description: '备份系统配置'
+    },
+    systemOnOff: {
+      title: '系统开关',
+      description: '系统启动和关闭',
+      reboot: '重启系统',
+      shutdown: '关闭系统'
+    },
+    systemUpdate: {
+      title: '系统更新',
+      description: '系统版本更新'
     }
   }
 }
