@@ -1294,5 +1294,65 @@ export default {
     ipRequired: '请输入IP地址',
     ipInvalid: 'IP地址格式不正确',
     notSameAsOld: '不能与原值相同'
+  },
+
+  // Key Management Module
+  key: {
+    title: '密钥管理',
+    description: '管理代理密钥',
+    add: '添加密钥',
+    addTitle: '新增密钥',
+    editTitle: '编辑密钥',
+    deleteConfirm: '确定要删除该密钥吗？',
+    keyName: '密钥名称',
+    namePlaceholder: '请输入密钥名称',
+    nameRequired: '密钥名称不能为空',
+    keyType: '密钥类型',
+    typeRequired: '请选择密钥类型',
+    keyContent: '密钥内容',
+    contentPlaceholder: '请输入密钥内容',
+    contentRequired: '密钥内容不能为空',
+    createTime: '创建时间'
+  },
+
+  // MAC Access Control Module
+  mac: {
+    title: 'MAC访问控制',
+    description: '配置MAC地址访问控制',
+    add: '添加规则',
+    addTitle: '新增MAC规则',
+    editTitle: '编辑MAC规则',
+    deleteConfirm: '确定要删除该规则吗？',
+    index: '序号',
+    macAddress: 'MAC地址',
+    macPlaceholder: '请输入MAC地址，如 00:11:22:33:44:55',
+    macRequired: 'MAC地址不能为空',
+    macFormatError: 'MAC地址格式不正确',
+    searchPlaceholder: '搜索MAC地址',
+    createTime: '创建时间'
+  },
+
+  // Database Policy Module
+  databasePolicy: {
+    title: '数据库策略',
+    description: '配置数据库同步策略',
+    add: '添加策略',
+    addTitle: '新增数据库策略',
+    editTitle: '编辑数据库策略',
+    deleteConfirm: '确定要删除该策略吗？',
+    policyName: '策略名称',
+    policyNameRequired: '策略名称不能为空',
+    sourceDb: '源数据库',
+    sourceDbRequired: '请选择源数据库',
+    targetDb: '目标数据库',
+    targetDbRequired: '请选择目标数据库',
+    syncMode: '同步模式',
+    syncModeRequired: '请选择同步模式',
+    fullSync: '全量同步',
+    incrementalSync: '增量同步',
+    syncInterval: '同步间隔',
+    syncIntervalRequired: '同步间隔不能为空',
+    enabled: '已启用',
+    disabled: '已禁用'
   }
 }
