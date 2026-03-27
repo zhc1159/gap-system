@@ -53,6 +53,48 @@ const defaultMenus: IMenuItem[] = [
     ]
   },
   {
+    id: 'supervise',
+    path: '/supervise',
+    name: 'supervise',
+    icon: 'fa-desktop',
+    title: '状态监控',
+    titleEn: 'Supervision',
+    enabled: true,
+    sort: 2,
+    children: [
+      {
+        id: 'supervise-sys-info',
+        path: '/supervise/sys-info',
+        name: 'supervise-sys-info',
+        icon: 'fa-info-circle',
+        title: '系统信息',
+        titleEn: 'System Info',
+        enabled: true,
+        sort: 1
+      },
+      {
+        id: 'supervise-gap-dip',
+        path: '/supervise/gap-dip',
+        name: 'supervise-gap-dip',
+        icon: 'fa-server',
+        title: '设备IP监控',
+        titleEn: 'Device IP Monitor',
+        enabled: true,
+        sort: 2
+      },
+      {
+        id: 'supervise-gap-file-sync',
+        path: '/supervise/gap-file-sync',
+        name: 'supervise-gap-file-sync',
+        icon: 'fa-files-o',
+        title: '文件同步监控',
+        titleEn: 'File Sync Monitor',
+        enabled: true,
+        sort: 3
+      }
+    ]
+  },
+  {
     id: 'system',
     path: '/system',
     name: 'system',
@@ -60,7 +102,7 @@ const defaultMenus: IMenuItem[] = [
     title: '系统管理',
     titleEn: 'System Management',
     enabled: true,
-    sort: 2,
+    sort: 3,
     children: [
       {
         id: 'system-interface',
@@ -102,7 +144,7 @@ const defaultMenus: IMenuItem[] = [
     title: '权限管理',
     titleEn: 'Authority Management',
     enabled: true,
-    sort: 3,
+    sort: 4,
     children: [
       {
         id: 'authority-users',
@@ -144,7 +186,7 @@ const defaultMenus: IMenuItem[] = [
     title: '安全策略',
     titleEn: 'Security Policy',
     enabled: true,
-    sort: 4,
+    sort: 5,
     children: [
       {
         id: 'security-access',
@@ -155,6 +197,234 @@ const defaultMenus: IMenuItem[] = [
         titleEn: 'Access Control',
         enabled: true,
         sort: 1
+      },
+      {
+        id: 'security-database',
+        path: '/security/database',
+        name: 'security-database',
+        icon: 'fa-database',
+        title: '数据库访问',
+        titleEn: 'Database Access',
+        enabled: true,
+        sort: 2
+      },
+      {
+        id: 'security-file',
+        path: '/security/file',
+        name: 'security-file',
+        icon: 'fa-file',
+        title: '文件访问',
+        titleEn: 'File Access',
+        enabled: true,
+        sort: 3
+      }
+    ]
+  },
+  {
+    id: 'transparentRule',
+    path: '/transparentRule',
+    name: 'transparentRule',
+    icon: 'fa-filter',
+    title: '透明规则',
+    titleEn: 'Transparent Rules',
+    enabled: true,
+    sort: 6,
+    children: [
+      {
+        id: 'transparentRule-input',
+        path: '/transparentRule/input',
+        name: 'transparentRule-input',
+        icon: 'fa-filter',
+        title: '入站规则',
+        titleEn: 'Input Rules',
+        enabled: true,
+        sort: 1
+      },
+      {
+        id: 'transparentRule-forward',
+        path: '/transparentRule/forward',
+        name: 'transparentRule-forward',
+        icon: 'fa-exchange',
+        title: '转发规则',
+        titleEn: 'Forward Rules',
+        enabled: true,
+        sort: 2
+      },
+      {
+        id: 'transparentRule-ip-group',
+        path: '/transparentRule/ip-group',
+        name: 'transparentRule-ip-group',
+        icon: 'fa-sitemap',
+        title: 'IP地址组',
+        titleEn: 'IP Group',
+        enabled: true,
+        sort: 3
+      },
+      {
+        id: 'transparentRule-port-group',
+        path: '/transparentRule/port-group',
+        name: 'transparentRule-port-group',
+        icon: 'fa-th-large',
+        title: '端口组',
+        titleEn: 'Port Group',
+        enabled: true,
+        sort: 4
+      },
+      {
+        id: 'transparentRule-time-group',
+        path: '/transparentRule/time-group',
+        name: 'transparentRule-time-group',
+        icon: 'fa-clock-o',
+        title: '时间组',
+        titleEn: 'Time Group',
+        enabled: true,
+        sort: 5
+      }
+    ]
+  },
+  {
+    id: 'nat',
+    path: '/nat',
+    name: 'nat',
+    icon: 'fa-random',
+    title: '地址转换',
+    titleEn: 'NAT',
+    enabled: true,
+    sort: 7,
+    children: [
+      {
+        id: 'nat-source',
+        path: '/nat/source',
+        name: 'nat-source',
+        icon: 'fa-random',
+        title: '源地址转换',
+        titleEn: 'Source NAT',
+        enabled: true,
+        sort: 1
+      },
+      {
+        id: 'nat-dest',
+        path: '/nat/dest',
+        name: 'nat-dest',
+        icon: 'fa-random',
+        title: '目的地址转换',
+        titleEn: 'Destination NAT',
+        enabled: true,
+        sort: 2
+      },
+      {
+        id: 'nat-out',
+        path: '/nat/out',
+        name: 'nat-out',
+        icon: 'fa-sign-out',
+        title: '出站NAT',
+        titleEn: 'Outbound NAT',
+        enabled: true,
+        sort: 3
+      },
+      {
+        id: 'nat-ip-group',
+        path: '/nat/ip-group',
+        name: 'nat-ip-group',
+        icon: 'fa-sitemap',
+        title: '转换IP组',
+        titleEn: 'IP Group',
+        enabled: true,
+        sort: 4
+      },
+      {
+        id: 'nat-port-group',
+        path: '/nat/port-group',
+        name: 'nat-port-group',
+        icon: 'fa-th-large',
+        title: '转换端口组',
+        titleEn: 'Port Group',
+        enabled: true,
+        sort: 5
+      }
+    ]
+  },
+  {
+    id: 'opc',
+    path: '/opc',
+    name: 'opc',
+    icon: 'fa-industry',
+    title: '工控代理',
+    titleEn: 'Industrial Protocol',
+    enabled: true,
+    sort: 8,
+    children: [
+      {
+        id: 'opc-modbus',
+        path: '/opc/modbus',
+        name: 'opc-modbus',
+        icon: 'fa-plug',
+        title: 'Modbus协议',
+        titleEn: 'Modbus Protocol',
+        enabled: true,
+        sort: 1
+      },
+      {
+        id: 'opc-opcua',
+        path: '/opc/opcua',
+        name: 'opc-opcua',
+        icon: 'fa-server',
+        title: 'OPC UA协议',
+        titleEn: 'OPC UA Protocol',
+        enabled: true,
+        sort: 2
+      },
+      {
+        id: 'opc-s7',
+        path: '/opc/s7',
+        name: 'opc-s7',
+        icon: 'fa-microchip',
+        title: 'S7协议',
+        titleEn: 'S7 Protocol',
+        enabled: true,
+        sort: 3
+      }
+    ]
+  },
+  {
+    id: 'rules',
+    path: '/rules',
+    name: 'rules',
+    icon: 'fa-gavel',
+    title: '规则管理',
+    titleEn: 'Rules Management',
+    enabled: true,
+    sort: 9,
+    children: [
+      {
+        id: 'rules-ferry-landing-zone',
+        path: '/rules/ferry/landing-zone',
+        name: 'rules-ferry-landing-zone',
+        icon: 'fa-hdd-o',
+        title: '落地区配置',
+        titleEn: 'Landing Zone',
+        enabled: true,
+        sort: 1
+      },
+      {
+        id: 'rules-ferry-path-conf',
+        path: '/rules/ferry/path-conf',
+        name: 'rules-ferry-path-conf',
+        icon: 'fa-folder-open',
+        title: '路径配置',
+        titleEn: 'Path Configuration',
+        enabled: true,
+        sort: 2
+      },
+      {
+        id: 'rules-database-show',
+        path: '/rules/database/show',
+        name: 'rules-database-show',
+        icon: 'fa-database',
+        title: '数据库同步',
+        titleEn: 'Database Sync',
+        enabled: true,
+        sort: 3
       }
     ]
   },
@@ -166,7 +436,7 @@ const defaultMenus: IMenuItem[] = [
     title: '审计日志',
     titleEn: 'Audit Logs',
     enabled: true,
-    sort: 5,
+    sort: 10,
     children: [
       {
         id: 'audit-attack',
@@ -218,7 +488,7 @@ const defaultMenus: IMenuItem[] = [
     title: '系统维护',
     titleEn: 'System Maintenance',
     enabled: true,
-    sort: 6,
+    sort: 11,
     children: [
       {
         id: 'maintenance-backup',
@@ -231,6 +501,16 @@ const defaultMenus: IMenuItem[] = [
         sort: 1
       },
       {
+        id: 'maintenance-profile-backup',
+        path: '/maintenance/profile-backup',
+        name: 'maintenance-profile-backup',
+        icon: 'fa-file-archive-o',
+        title: '配置文件备份',
+        titleEn: 'Profile Backup',
+        enabled: true,
+        sort: 2
+      },
+      {
         id: 'maintenance-upgrade',
         path: '/maintenance/upgrade',
         name: 'maintenance-upgrade',
@@ -238,7 +518,27 @@ const defaultMenus: IMenuItem[] = [
         title: '系统升级',
         titleEn: 'System Upgrade',
         enabled: true,
-        sort: 2
+        sort: 3
+      },
+      {
+        id: 'maintenance-antivirus',
+        path: '/maintenance/antivirus',
+        name: 'maintenance-antivirus',
+        icon: 'fa-shield',
+        title: '病毒库更新',
+        titleEn: 'Antivirus Update',
+        enabled: true,
+        sort: 4
+      },
+      {
+        id: 'maintenance-license',
+        path: '/maintenance/license',
+        name: 'maintenance-license',
+        icon: 'fa-certificate',
+        title: '许可证管理',
+        titleEn: 'License Management',
+        enabled: true,
+        sort: 5
       },
       {
         id: 'maintenance-diagnose',
@@ -248,7 +548,27 @@ const defaultMenus: IMenuItem[] = [
         title: '诊断工具',
         titleEn: 'Diagnostic Tools',
         enabled: true,
-        sort: 3
+        sort: 6
+      },
+      {
+        id: 'maintenance-diagnostic',
+        path: '/maintenance/diagnostic',
+        name: 'maintenance-diagnostic',
+        icon: 'fa-stethoscope',
+        title: '网络诊断',
+        titleEn: 'Network Diagnostic',
+        enabled: true,
+        sort: 7
+      },
+      {
+        id: 'maintenance-system-on-off',
+        path: '/maintenance/system-on-off',
+        name: 'maintenance-system-on-off',
+        icon: 'fa-power-off',
+        title: '系统开关',
+        titleEn: 'System On/Off',
+        enabled: true,
+        sort: 8
       }
     ]
   }
@@ -262,8 +582,8 @@ const defaultMenus: IMenuItem[] = [
 const roleMenuMap: Record<string, string[]> = {
   deepnet: ['*'], // 超级管理员 - 全部权限 + 系统级权限
   sysadm: ['*'],  // 系统管理员 - 全部菜单权限
-  admin: ['status', 'system', 'authority', 'security', 'audit', 'maintenance'],
-  auditor: ['status', 'audit']
+  admin: ['status', 'supervise', 'system', 'authority', 'security', 'transparentRule', 'nat', 'opc', 'rules', 'audit', 'maintenance'],
+  auditor: ['status', 'supervise', 'audit']
 }
 
 // 系统级权限菜单（仅 deepnet 可访问）
