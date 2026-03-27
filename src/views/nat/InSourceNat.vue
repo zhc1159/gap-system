@@ -280,7 +280,7 @@ const formRules = computed<FormRules>(() => ({
   action: [{ required: true, message: t('nat.inSourceNat.actionRequired'), trigger: 'change' }],
   to_source_addr: [
     {
-      validator: (rule, value, callback) => {
+      validator: (_rule, value, callback) => {
         if (formData.value.action === 'SNAT' && !value) {
           callback(new Error(t('nat.inSourceNat.virtualSourceRequired')))
         } else {

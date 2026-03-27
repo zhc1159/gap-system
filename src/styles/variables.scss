@@ -32,6 +32,7 @@ $bg-darker: #162231;               // 更深背景 - 不再那么暗
 $bg-darkest: #0d1520;              // 最深背景 - 适度调亮
 $bg-hover: #3a4f63;                // 悬停背景 - 更亮更清晰
 $bg-elevated: #2d4053;             // 悬浮/弹出层背景
+$bg-dark: #1e2a3a;                 // 别名，用于兼容
 
 // 玻璃态背景
 $bg-glass: rgba(30, 42, 58, 0.85);
@@ -101,6 +102,7 @@ $shadow-glow-strong: 0 0 50px rgba(0, 212, 255, 0.5);
 $shadow-glow-purple: 0 0 25px rgba(99, 102, 241, 0.35);
 $shadow-glow-success: 0 0 25px rgba(16, 185, 129, 0.35);
 $shadow-glow-warning: 0 0 25px rgba(245, 158, 11, 0.35);
+$shadow-glow-danger: 0 0 25px rgba(239, 68, 68, 0.35);
 
 // 卡片阴影
 $shadow-card: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 212, 255, 0.05);

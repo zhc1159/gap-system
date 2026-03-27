@@ -252,7 +252,7 @@ const handleDelete = async (id: string) => {
   }
 }
 
-const handleTest = async (row: Database) => {
+const handleTest = async (_row: Database) => {
   // Simulate connection test
   ElMessage.success(t('database.connectionSuccess'))
 }

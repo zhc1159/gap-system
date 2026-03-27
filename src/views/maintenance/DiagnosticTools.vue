@@ -12,7 +12,7 @@
 
     <el-card class="tech-card">
       <!-- Tool Tabs -->
-      <el-tabs v-model="activeTool" class="tech-tabs" @tab-change="handleToolChange">
+      <el-tabs v-model="activeTool" class="tech-tabs" @tab-change="(name) => handleToolChange(name as string)">
         <el-tab-pane :label="t('maintenance.diagTool.ping')" name="ping" />
         <el-tab-pane :label="t('maintenance.diagTool.traceroute')" name="traceroute" />
         <el-tab-pane :label="t('maintenance.diagTool.arp')" name="arp" />

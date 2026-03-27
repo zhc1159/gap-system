@@ -246,7 +246,7 @@ function checkNewVersion() {
 }
 
 // Handle file change
-function handleFileChange(file: UploadFile) => { // void file {
+function handleFileChange(file: UploadFile) {
   fileList.value = [file]
   return false
 }

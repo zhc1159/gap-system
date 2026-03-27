@@ -373,7 +373,7 @@ const formRules = computed<FormRules>(() => ({
   where: [{ required: true, message: t('nat.sourceNat.directionRequired'), trigger: 'change' }],
   to_source_addr: [
     {
-      validator: (rule, value, callback) => {
+      validator: (_rule, value, callback) => {
         if (formData.value.action === 'SNAT' && !value) {
           callback(new Error(t('nat.sourceNat.virtualSourceRequired')))
         } else {

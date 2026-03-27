@@ -166,11 +166,11 @@ function copyDeviceCode() {
     })
 }
 
-function handleFileChange(file: any, files: any[]) {
+function handleFileChange(_file: any, files: any[]) {
   fileList.value = files.map(f => f.raw)
 }
 
-function handleFileRemove(file: any, files: any[]) {
+function handleFileRemove(_file: any, files: any[]) {
   fileList.value = files.map(f => f.raw)
 }
 

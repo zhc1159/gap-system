@@ -365,7 +365,7 @@ const handleEditSourceNat = (row: SourceNatRule) => {
   sourceNatDialogVisible.value = true
 }
 
-const handleDeleteDestNat = async (id: number) => {
+const handleDeleteDestNat = async (_id: number) => {
   try {
     await ElMessageBox.confirm(t('nat.outNat.deleteConfirm'), t('common.confirm'), { type: 'warning' })
     ElMessage.success(t('common.deleteSuccess'))
@@ -373,7 +373,7 @@ const handleDeleteDestNat = async (id: number) => {
   } catch (e) {}
 }
 
-const handleDeleteSourceNat = async (id: number) => {
+const handleDeleteSourceNat = async (_id: number) => {
   try {
     await ElMessageBox.confirm(t('nat.outNat.deleteConfirm'), t('common.confirm'), { type: 'warning' })
     ElMessage.success(t('common.deleteSuccess'))

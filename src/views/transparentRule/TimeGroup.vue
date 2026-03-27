@@ -158,16 +158,15 @@
         </el-form-item>
 
         <el-form-item :label="t('transparentRule.timeGroup.weekdaySelection')">
-          <div class="weekday-checkboxes">
+          <el-checkbox-group v-model="selectedWeekdays" class="weekday-checkboxes">
             <el-checkbox
               v-for="option in weekdayOptions"
               :key="option.value"
               :label="option.value"
-              v-model="selectedWeekdays"
             >
               {{ locale === 'zh-CN' ? option.label : option.labelEn }}
             </el-checkbox>
-          </div>
+          </el-checkbox-group>
           <div class="weekday-hint">
             {{ t('transparentRule.timeGroup.weekdayHint') }}
           </div>

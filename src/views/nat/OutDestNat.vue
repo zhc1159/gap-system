@@ -265,7 +265,7 @@ const handleEdit = (row: OutDestNatRule) => {
   dialogVisible.value = true
 }
 
-const handleDelete = async (id: number) => {
+const handleDelete = async (_id: number) => {
   try {
     await ElMessageBox.confirm(t('nat.outDestNat.deleteConfirm'), t('common.confirm'), { type: 'warning' })
     ElMessage.success(t('common.deleteSuccess'))

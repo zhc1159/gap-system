@@ -22,9 +22,6 @@ const AuthorityUsers = () => import('@/views/authority/UsersIndex.vue')
 const AuthorityClient = () => import('@/views/authority/ClientIndex.vue')
 const AuthoritySecurity = () => import('@/views/authority/SecurityConfig.vue')
 
-// Views - Security Policy
-const SecurityAccess = () => import('@/views/security/AccessControl.vue')
-
 // Views - Audit Logs
 const AuditAttack = () => import('@/views/audit/AttackLog.vue')
 const AuditWeb = () => import('@/views/audit/WebLog.vue')
@@ -45,6 +42,14 @@ const AuditStrategy = () => import('@/views/audit/StrategyLog.vue')
 const MaintenanceBackup = () => import('@/views/maintenance/BackupConfig.vue')
 const MaintenanceUpgrade = () => import('@/views/maintenance/SystemUpgrade.vue')
 const MaintenanceDiagnose = () => import('@/views/maintenance/DiagnoseTools.vue')
+const MaintenanceAntiVirus = () => import('@/views/maintenance/AntiVirusUpdate.vue')
+const MaintenanceConfigImport = () => import('@/views/maintenance/ConfigImport.vue')
+const MaintenanceDiagnostic = () => import('@/views/maintenance/DiagnosticTools.vue')
+const MaintenanceLicense = () => import('@/views/maintenance/LicenseShow.vue')
+const MaintenanceLoadProfile = () => import('@/views/maintenance/LoadProfile.vue')
+const MaintenanceProfileBackup = () => import('@/views/maintenance/ProfileBackup.vue')
+const MaintenanceSystemOnOff = () => import('@/views/maintenance/SystemOnOff.vue')
+const MaintenanceSystemUpdate = () => import('@/views/maintenance/SystemUpdate.vue')
 
 // Views - Error Pages
 const NotFound = () => import('@/views/error/NotFound.vue')
@@ -52,9 +57,61 @@ const Forbidden = () => import('@/views/error/Forbidden.vue')
 
 // Views - Login
 const Login = () => import('@/views/login/LoginIndex.vue')
+const ChangePwd = () => import('@/views/login/ChangePwd.vue')
+const ClientLogin = () => import('@/views/login/ClientLogin.vue')
+const ClientManage = () => import('@/views/login/ClientManage.vue')
+const UpdatePwd = () => import('@/views/login/UpdatePwd.vue')
 
 // Dashboard
 const Dashboard = () => import('@/views/dashboard/DashboardIndex.vue')
+
+// Views - Transparent Rules
+const TransparentInput = () => import('@/views/transparentRule/InputRules.vue')
+const TransparentForward = () => import('@/views/transparentRule/ForwardRules.vue')
+const TransparentIpGroup = () => import('@/views/transparentRule/IpGroup.vue')
+const TransparentPortGroup = () => import('@/views/transparentRule/PortGroup.vue')
+const TransparentTimeGroup = () => import('@/views/transparentRule/TimeGroup.vue')
+
+// Views - NAT
+const NatSource = () => import('@/views/nat/SourceNat.vue')
+const NatDest = () => import('@/views/nat/DestNat.vue')
+const NatOut = () => import('@/views/nat/OutNat.vue')
+const NatInSource = () => import('@/views/nat/InSourceNat.vue')
+const NatInDest = () => import('@/views/nat/InDestNat.vue')
+const NatOutSource = () => import('@/views/nat/OutSourceNat.vue')
+const NatOutDest = () => import('@/views/nat/OutDestNat.vue')
+const NatTranIpGroup = () => import('@/views/nat/TranIpGroup.vue')
+const NatTranPortGroup = () => import('@/views/nat/TranPortGroup.vue')
+
+// Views - OPC
+const OpcModbus = () => import('@/views/opc/Modbus.vue')
+const OpcOpcua = () => import('@/views/opc/Opcua.vue')
+const OpcS7 = () => import('@/views/opc/S7.vue')
+
+// Views - Rules
+const RulesMac = () => import('@/views/rules/access/Mac.vue')
+const RulesDatabaseShow = () => import('@/views/rules/database/DatabaseShow.vue')
+const RulesDatabasePolicy = () => import('@/views/rules/database/DatabasePolicyShow.vue')
+const RulesFerryAntivirus = () => import('@/views/rules/ferry/Antivirus.vue')
+const RulesFerryKeyFilter = () => import('@/views/rules/ferry/KeyFilter.vue')
+const RulesFerryLandingZone = () => import('@/views/rules/ferry/LandingZone.vue')
+const RulesFerryPathConf = () => import('@/views/rules/ferry/PathConf.vue')
+const RulesFerrySuffixFilter = () => import('@/views/rules/ferry/SuffixFilter.vue')
+const RulesAgentKey = () => import('@/views/rules/agent/Key.vue')
+const RulesAgentRules = () => import('@/views/rules/agent/Rules.vue')
+const RulesAgentVideo = () => import('@/views/rules/agent/VideoAgent.vue')
+
+// Views - Security
+const SecurityAccess = () => import('@/views/security/AccessControl.vue')
+const SecurityDatabase = () => import('@/views/security/DatabaseAccess.vue')
+const SecurityFile = () => import('@/views/security/FileAccess.vue')
+
+// Views - Supervise
+const SuperviseGapDip = () => import('@/views/supervise/GapDip.vue')
+const SuperviseGapFileSync = () => import('@/views/supervise/GapFileSync.vue')
+const SuperviseGapIneth = () => import('@/views/supervise/GapIneth.vue')
+const SuperviseSysInfo = () => import('@/views/supervise/SysInfo.vue')
+const SuperviseSysInfo2 = () => import('@/views/supervise/SysInfo2.vue')
 
 /**
  * Route meta interface extension
@@ -89,6 +146,50 @@ export const staticRoutes: RouteRecordRaw[] = [
       titleEn: 'Login',
       hidden: true,
       requiresAuth: false
+    }
+  },
+  {
+    path: '/change-pwd',
+    name: 'ChangePwd',
+    component: ChangePwd,
+    meta: {
+      title: '修改密码',
+      titleEn: 'Change Password',
+      hidden: true,
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/client-login',
+    name: 'ClientLogin',
+    component: ClientLogin,
+    meta: {
+      title: '客户端登录',
+      titleEn: 'Client Login',
+      hidden: true,
+      requiresAuth: false
+    }
+  },
+  {
+    path: '/client-manage',
+    name: 'ClientManage',
+    component: ClientManage,
+    meta: {
+      title: '客户端管理',
+      titleEn: 'Client Management',
+      hidden: true,
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/update-pwd',
+    name: 'UpdatePwd',
+    component: UpdatePwd,
+    meta: {
+      title: '更新密码',
+      titleEn: 'Update Password',
+      hidden: true,
+      requiresAuth: true
     }
   },
   {
@@ -301,6 +402,97 @@ export const dynamicRoutes: RouteRecordRaw[] = [
           icon: 'fa-lock',
           roles: ['sysadm', 'admin']
         }
+      },
+      {
+        path: 'database',
+        name: 'SecurityDatabase',
+        component: SecurityDatabase,
+        meta: {
+          title: '数据库访问',
+          titleEn: 'Database Access',
+          icon: 'fa-database',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'file',
+        name: 'SecurityFile',
+        component: SecurityFile,
+        meta: {
+          title: '文件访问',
+          titleEn: 'File Access',
+          icon: 'fa-file',
+          roles: ['sysadm', 'admin']
+        }
+      }
+    ]
+  },
+  // Supervise
+  {
+    path: '/supervise',
+    component: BaseLayout,
+    redirect: '/supervise/sys-info',
+    meta: {
+      title: '状态监控',
+      titleEn: 'Supervision',
+      icon: 'fa-eye',
+      roles: ['sysadm', 'admin', 'auditor']
+    },
+    children: [
+      {
+        path: 'sys-info',
+        name: 'SuperviseSysInfo',
+        component: SuperviseSysInfo,
+        meta: {
+          title: '系统信息',
+          titleEn: 'System Info',
+          icon: 'fa-info-circle',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'sys-info2',
+        name: 'SuperviseSysInfo2',
+        component: SuperviseSysInfo2,
+        meta: {
+          title: '系统信息(备份)',
+          titleEn: 'System Info (Backup)',
+          icon: 'fa-info',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'gap-dip',
+        name: 'SuperviseGapDip',
+        component: SuperviseGapDip,
+        meta: {
+          title: '设备IP监控',
+          titleEn: 'Device IP Monitor',
+          icon: 'fa-server',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'gap-file-sync',
+        name: 'SuperviseGapFileSync',
+        component: SuperviseGapFileSync,
+        meta: {
+          title: '文件同步监控',
+          titleEn: 'File Sync Monitor',
+          icon: 'fa-files-o',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'gap-ineth',
+        name: 'SuperviseGapIneth',
+        component: SuperviseGapIneth,
+        meta: {
+          title: '网络接口监控',
+          titleEn: 'Interface Monitor',
+          icon: 'fa-ethernet',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
       }
     ]
   },
@@ -487,11 +679,350 @@ export const dynamicRoutes: RouteRecordRaw[] = [
       {
         path: 'input',
         name: 'TransparentInput',
-        component: () => import('@/views/transparentRule/InputRules.vue'),
+        component: TransparentInput,
         meta: {
           title: '入站规则',
           titleEn: 'Input Rules',
           icon: 'fa-filter',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'forward',
+        name: 'TransparentForward',
+        component: TransparentForward,
+        meta: {
+          title: '转发规则',
+          titleEn: 'Forward Rules',
+          icon: 'fa-exchange',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'ip-group',
+        name: 'TransparentIpGroup',
+        component: TransparentIpGroup,
+        meta: {
+          title: 'IP地址组',
+          titleEn: 'IP Group',
+          icon: 'fa-sitemap',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'port-group',
+        name: 'TransparentPortGroup',
+        component: TransparentPortGroup,
+        meta: {
+          title: '端口组',
+          titleEn: 'Port Group',
+          icon: 'fa-th-large',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'time-group',
+        name: 'TransparentTimeGroup',
+        component: TransparentTimeGroup,
+        meta: {
+          title: '时间组',
+          titleEn: 'Time Group',
+          icon: 'fa-clock-o',
+          roles: ['sysadm', 'admin']
+        }
+      }
+    ]
+  },
+  // NAT Address Translation
+  {
+    path: '/nat',
+    component: BaseLayout,
+    redirect: '/nat/source',
+    meta: {
+      title: '地址转换',
+      titleEn: 'NAT',
+      icon: 'fa-random',
+      roles: ['sysadm', 'admin']
+    },
+    children: [
+      {
+        path: 'source',
+        name: 'NatSource',
+        component: NatSource,
+        meta: {
+          title: '源地址转换',
+          titleEn: 'Source NAT',
+          icon: 'fa-random',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'dest',
+        name: 'NatDest',
+        component: NatDest,
+        meta: {
+          title: '目的地址转换',
+          titleEn: 'Destination NAT',
+          icon: 'fa-random',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'out',
+        name: 'NatOut',
+        component: NatOut,
+        meta: {
+          title: '出站NAT',
+          titleEn: 'Outbound NAT',
+          icon: 'fa-sign-out',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'in-source',
+        name: 'NatInSource',
+        component: NatInSource,
+        meta: {
+          title: '入站源NAT',
+          titleEn: 'Inbound Source NAT',
+          icon: 'fa-sign-in',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'in-dest',
+        name: 'NatInDest',
+        component: NatInDest,
+        meta: {
+          title: '入站目的NAT',
+          titleEn: 'Inbound Dest NAT',
+          icon: 'fa-sign-in',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'out-source',
+        name: 'NatOutSource',
+        component: NatOutSource,
+        meta: {
+          title: '出站源NAT',
+          titleEn: 'Outbound Source NAT',
+          icon: 'fa-sign-out',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'out-dest',
+        name: 'NatOutDest',
+        component: NatOutDest,
+        meta: {
+          title: '出站目的NAT',
+          titleEn: 'Outbound Dest NAT',
+          icon: 'fa-sign-out',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'ip-group',
+        name: 'NatTranIpGroup',
+        component: NatTranIpGroup,
+        meta: {
+          title: '转换IP组',
+          titleEn: 'Translation IP Group',
+          icon: 'fa-sitemap',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'port-group',
+        name: 'NatTranPortGroup',
+        component: NatTranPortGroup,
+        meta: {
+          title: '转换端口组',
+          titleEn: 'Translation Port Group',
+          icon: 'fa-th-large',
+          roles: ['sysadm', 'admin']
+        }
+      }
+    ]
+  },
+  // OPC Industrial Protocol
+  {
+    path: '/opc',
+    component: BaseLayout,
+    redirect: '/opc/modbus',
+    meta: {
+      title: '工控代理',
+      titleEn: 'Industrial Protocol',
+      icon: 'fa-industry',
+      roles: ['sysadm', 'admin']
+    },
+    children: [
+      {
+        path: 'modbus',
+        name: 'OpcModbus',
+        component: OpcModbus,
+        meta: {
+          title: 'Modbus协议',
+          titleEn: 'Modbus Protocol',
+          icon: 'fa-plug',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'opcua',
+        name: 'OpcOpcua',
+        component: OpcOpcua,
+        meta: {
+          title: 'OPC UA协议',
+          titleEn: 'OPC UA Protocol',
+          icon: 'fa-server',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 's7',
+        name: 'OpcS7',
+        component: OpcS7,
+        meta: {
+          title: 'S7协议',
+          titleEn: 'S7 Protocol',
+          icon: 'fa-microchip',
+          roles: ['sysadm', 'admin']
+        }
+      }
+    ]
+  },
+  // Rules Management
+  {
+    path: '/rules',
+    component: BaseLayout,
+    redirect: '/rules/ferry/landing-zone',
+    meta: {
+      title: '规则管理',
+      titleEn: 'Rules Management',
+      icon: 'fa-gavel',
+      roles: ['sysadm', 'admin']
+    },
+    children: [
+      {
+        path: 'ferry/landing-zone',
+        name: 'RulesFerryLandingZone',
+        component: RulesFerryLandingZone,
+        meta: {
+          title: '落地区配置',
+          titleEn: 'Landing Zone',
+          icon: 'fa-hdd-o',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'ferry/path-conf',
+        name: 'RulesFerryPathConf',
+        component: RulesFerryPathConf,
+        meta: {
+          title: '路径配置',
+          titleEn: 'Path Configuration',
+          icon: 'fa-folder-open',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'ferry/antivirus',
+        name: 'RulesFerryAntivirus',
+        component: RulesFerryAntivirus,
+        meta: {
+          title: '病毒过滤',
+          titleEn: 'Antivirus Filter',
+          icon: 'fa-shield',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'ferry/suffix-filter',
+        name: 'RulesFerrySuffixFilter',
+        component: RulesFerrySuffixFilter,
+        meta: {
+          title: '后缀过滤',
+          titleEn: 'Suffix Filter',
+          icon: 'fa-filter',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'ferry/key-filter',
+        name: 'RulesFerryKeyFilter',
+        component: RulesFerryKeyFilter,
+        meta: {
+          title: '关键字过滤',
+          titleEn: 'Keyword Filter',
+          icon: 'fa-key',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'database/show',
+        name: 'RulesDatabaseShow',
+        component: RulesDatabaseShow,
+        meta: {
+          title: '数据库同步',
+          titleEn: 'Database Sync',
+          icon: 'fa-database',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'database/policy',
+        name: 'RulesDatabasePolicy',
+        component: RulesDatabasePolicy,
+        meta: {
+          title: '数据库策略',
+          titleEn: 'Database Policy',
+          icon: 'fa-shield',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'access/mac',
+        name: 'RulesMac',
+        component: RulesMac,
+        meta: {
+          title: 'MAC访问控制',
+          titleEn: 'MAC Access Control',
+          icon: 'fa-mac-address',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'agent/key',
+        name: 'RulesAgentKey',
+        component: RulesAgentKey,
+        meta: {
+          title: '代理密钥',
+          titleEn: 'Agent Key',
+          icon: 'fa-key',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'agent/rules',
+        name: 'RulesAgentRules',
+        component: RulesAgentRules,
+        meta: {
+          title: '代理规则',
+          titleEn: 'Agent Rules',
+          icon: 'fa-gavel',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'agent/video',
+        name: 'RulesAgentVideo',
+        component: RulesAgentVideo,
+        meta: {
+          title: '视频代理',
+          titleEn: 'Video Agent',
+          icon: 'fa-video-camera',
           roles: ['sysadm', 'admin']
         }
       }
@@ -521,6 +1052,39 @@ export const dynamicRoutes: RouteRecordRaw[] = [
         }
       },
       {
+        path: 'profile-backup',
+        name: 'MaintenanceProfileBackup',
+        component: MaintenanceProfileBackup,
+        meta: {
+          title: '配置文件备份',
+          titleEn: 'Profile Backup',
+          icon: 'fa-file-archive-o',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'load-profile',
+        name: 'MaintenanceLoadProfile',
+        component: MaintenanceLoadProfile,
+        meta: {
+          title: '加载配置',
+          titleEn: 'Load Profile',
+          icon: 'fa-upload',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'config-import',
+        name: 'MaintenanceConfigImport',
+        component: MaintenanceConfigImport,
+        meta: {
+          title: '配置导入',
+          titleEn: 'Config Import',
+          icon: 'fa-file-import',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
         path: 'upgrade',
         name: 'MaintenanceUpgrade',
         component: MaintenanceUpgrade,
@@ -532,6 +1096,39 @@ export const dynamicRoutes: RouteRecordRaw[] = [
         }
       },
       {
+        path: 'system-update',
+        name: 'MaintenanceSystemUpdate',
+        component: MaintenanceSystemUpdate,
+        meta: {
+          title: '系统更新',
+          titleEn: 'System Update',
+          icon: 'fa-refresh',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'antivirus',
+        name: 'MaintenanceAntiVirus',
+        component: MaintenanceAntiVirus,
+        meta: {
+          title: '病毒库更新',
+          titleEn: 'Antivirus Update',
+          icon: 'fa-shield',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'license',
+        name: 'MaintenanceLicense',
+        component: MaintenanceLicense,
+        meta: {
+          title: '许可证管理',
+          titleEn: 'License Management',
+          icon: 'fa-certificate',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
         path: 'diagnose',
         name: 'MaintenanceDiagnose',
         component: MaintenanceDiagnose,
@@ -539,6 +1136,28 @@ export const dynamicRoutes: RouteRecordRaw[] = [
           title: '诊断工具',
           titleEn: 'Diagnostic Tools',
           icon: 'fa-tools',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'diagnostic',
+        name: 'MaintenanceDiagnostic',
+        component: MaintenanceDiagnostic,
+        meta: {
+          title: '网络诊断',
+          titleEn: 'Network Diagnostic',
+          icon: 'fa-stethoscope',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'system-on-off',
+        name: 'MaintenanceSystemOnOff',
+        component: MaintenanceSystemOnOff,
+        meta: {
+          title: '系统开关',
+          titleEn: 'System On/Off',
+          icon: 'fa-power-off',
           roles: ['sysadm', 'admin']
         }
       }

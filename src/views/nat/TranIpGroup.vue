@@ -135,7 +135,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { Grid, Plus, Edit, Delete } from '@element-plus/icons-vue'
@@ -184,7 +184,7 @@ const formRules = computed<FormRules>(() => ({
   ],
   ip_range: [
     {
-      validator: (rule, value, callback) => {
+      validator: (_rule, _value, callback) => {
         if (ipTags.value.length === 0) {
           callback(new Error(t('nat.ipGroup.ipRequired')))
         } else {

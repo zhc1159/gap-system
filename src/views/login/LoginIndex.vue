@@ -289,7 +289,7 @@ const loginRules = computed<FormRules>(() => ({
 }))
 
 // Certificate file change handler
-function handleCertChange(file: UploadFile) => { // void file {
+function handleCertChange(file: UploadFile) {
   loginForm.cert_file = file.raw || null
 }
 

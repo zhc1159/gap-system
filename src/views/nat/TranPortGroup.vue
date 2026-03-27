@@ -155,7 +155,7 @@ const dialogTitle = computed(() => {
     : t('nat.portGroup.editGroup')
 })
 
-const validatePortRange = (rule: any, value: string, callback: any) => {
+const validatePortRange = (_rule: any, value: string, callback: any) => {
   if (!value) {
     callback(new Error(t('nat.portGroup.portRequired')))
     return
