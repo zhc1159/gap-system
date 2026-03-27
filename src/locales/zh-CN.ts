@@ -37,7 +37,18 @@ export default {
     vsLastPeriod: '较上期',
     detail: '详情',
     time: '时间',
-    status: '状态'
+    status: '状态',
+    name: '名称',
+    placeholder: '请输入',
+    required: '此项为必填项',
+    source: '源地址',
+    destination: '目的地址',
+    port: '端口',
+    protocol: '协议',
+    prev: '上一步',
+    next: '下一步',
+    editSuccess: '修改成功',
+    addSuccess: '添加成功'
   },
 
   // Login
@@ -1027,5 +1038,261 @@ export default {
       title: '系统更新',
       description: '系统版本更新'
     }
+  },
+
+  // NAT Module Translations
+  nat: {
+    common: {
+      any: '任意',
+      clickToEnable: '点击启用',
+      clickToDisable: '点击禁用',
+      enable: '启用',
+      disable: '禁用',
+      enabled: '已启用',
+      disabled: '已禁用',
+      ruleName: '规则名称',
+      ruleNamePlaceholder: '请输入规则名称',
+      ruleNameRequired: '规则名称不能为空',
+      protocol: '协议',
+      protocolRequired: '请选择协议',
+      sourceIp: '源IP地址',
+      sourcePort: '源端口',
+      destIp: '目的IP地址',
+      destPort: '目的端口',
+      inInterface: '入口接口',
+      outInterface: '出口接口',
+      action: '动作',
+      actionRequired: '请选择动作',
+      virtualIp: '虚拟地址',
+      virtualPort: '虚拟端口',
+      status: '状态',
+      description: '描述'
+    },
+    sourceNat: {
+      title: '源地址转换',
+      description: '配置源NAT规则',
+      addRule: '添加规则',
+      editRule: '编辑规则',
+      virtualSource: '虚拟源地址',
+      virtualSourceRequired: 'SNAT动作需要填写虚拟源地址',
+      deleteConfirm: '确定要删除该规则吗？'
+    },
+    destNat: {
+      title: '目的地址转换',
+      description: '配置目的NAT规则',
+      addRule: '添加规则',
+      editRule: '编辑规则',
+      virtualDest: '虚拟目的地址',
+      deleteConfirm: '确定要删除该规则吗？'
+    },
+    outNat: {
+      title: '出站NAT',
+      description: '配置出站NAT规则'
+    },
+    inSourceNat: {
+      title: '入站源NAT',
+      description: '配置入站源地址转换'
+    },
+    inDestNat: {
+      title: '入站目的NAT',
+      description: '配置入站目的地址转换'
+    },
+    outSourceNat: {
+      title: '出站源NAT',
+      description: '配置出站源地址转换'
+    },
+    outDestNat: {
+      title: '出站目的NAT',
+      description: '配置出站目的地址转换'
+    },
+    ipGroup: {
+      title: 'IP地址组',
+      description: '管理IP地址组',
+      addGroup: '添加IP组',
+      editGroup: '编辑IP组',
+      groupName: '组名称',
+      groupNamePlaceholder: '请输入组名称',
+      groupNameRequired: '组名称不能为空',
+      groupNameMaxLength: '组名称不能超过31个字符',
+      groupNamePattern: '组名称只能包含字母、数字、下划线',
+      ipAddress: 'IP地址',
+      ipRequired: 'IP地址不能为空',
+      ipPlaceholder: '输入IP地址后按回车添加',
+      ipHint: '支持IPv4、IPv6、CIDR、IP范围、域名',
+      deleteConfirm: '确定要删除该IP组吗？'
+    },
+    portGroup: {
+      title: '端口组',
+      description: '管理端口组',
+      addGroup: '添加端口组',
+      editGroup: '编辑端口组',
+      groupName: '组名称',
+      portRequired: '端口不能为空',
+      portPlaceholder: '输入端口后按回车添加',
+      portHint: '支持单个端口或端口范围，如 80 或 8080-8090'
+    }
+  },
+
+  // Landing Zone Module
+  landingZone: {
+    title: '落地区配置',
+    description: '配置文件摆渡落地区',
+    add: '添加落地区',
+    addTitle: '新增落地区',
+    editTitle: '编辑落地区',
+    deleteConfirm: '确定要删除该落地区吗？',
+    zoneName: '区域名称',
+    namePlaceholder: '请输入区域名称',
+    nameRequired: '区域名称不能为空',
+    path: '路径',
+    pathPlaceholder: '请输入路径',
+    pathRequired: '路径不能为空',
+    maxStorage: '最大存储',
+    storageRequired: '存储容量不能为空',
+    storage: '存储使用',
+    status: '状态',
+    active: '已激活',
+    inactive: '未激活'
+  },
+
+  // Path Configuration Module
+  pathConf: {
+    title: '路径配置',
+    description: '配置文件传输路径',
+    add: '添加路径',
+    addTitle: '新增路径',
+    editTitle: '编辑路径',
+    deleteConfirm: '确定要删除该路径吗？',
+    name: '路径名称',
+    nameRequired: '路径名称不能为空',
+    sourcePath: '源路径',
+    sourcePathRequired: '源路径不能为空',
+    targetPath: '目标路径',
+    targetPathRequired: '目标路径不能为空',
+    permission: '权限',
+    permissionRequired: '请选择权限',
+    enabled: '已启用',
+    disabled: '已禁用'
+  },
+
+  // Database Sync Module
+  database: {
+    title: '数据库同步',
+    description: '配置数据库同步规则',
+    add: '添加数据库',
+    addTitle: '新增数据库配置',
+    editTitle: '编辑数据库配置',
+    deleteConfirm: '确定要删除该数据库配置吗？',
+    name: '数据库名称',
+    namePlaceholder: '请输入数据库名称',
+    nameRequired: '数据库名称不能为空',
+    dbType: '数据库类型',
+    typeRequired: '请选择数据库类型',
+    host: '主机地址',
+    hostPlaceholder: '请输入主机地址',
+    hostRequired: '主机地址不能为空',
+    port: '端口',
+    portRequired: '端口不能为空',
+    dbName: '数据库名',
+    dbNameRequired: '数据库名不能为空',
+    username: '用户名',
+    usernamePlaceholder: '请输入用户名',
+    usernameRequired: '用户名不能为空',
+    password: '密码',
+    passwordPlaceholder: '请输入密码',
+    passwordRequired: '密码不能为空',
+    testConnection: '测试连接',
+    connectionSuccess: '连接成功',
+    connectionFailed: '连接失败',
+    status: '状态',
+    lastSync: '最后同步'
+  },
+
+  // Antivirus Module
+  antivirus: {
+    title: '病毒过滤',
+    description: '配置病毒扫描规则',
+    add: '添加规则',
+    addTitle: '新增病毒过滤规则',
+    editTitle: '编辑病毒过滤规则',
+    deleteConfirm: '确定要删除该规则吗？',
+    username: '用户名',
+    usernamePlaceholder: '请输入用户名',
+    usernameRequired: '用户名不能为空',
+    scanSwitch: '扫描开关',
+    on: '开启',
+    off: '关闭',
+    switch: '开关',
+    scanCount: '扫描次数',
+    virusCount: '病毒数量',
+    handleMode: '处理方式',
+    handleModeRequired: '请选择处理方式',
+    handleModes: {
+      allow: '允许',
+      delete: '删除',
+      quarantine: '隔离'
+    }
+  },
+
+  // Key Filter Module
+  keyFilter: {
+    title: '关键字过滤',
+    description: '配置内容关键字过滤',
+    add: '添加规则',
+    addTitle: '新增关键字过滤规则',
+    editTitle: '编辑关键字过滤规则',
+    deleteConfirm: '确定要删除该规则吗？',
+    username: '用户名',
+    usernamePlaceholder: '请输入用户名',
+    usernameRequired: '用户名不能为空',
+    filterMode: '过滤模式',
+    accept: '允许',
+    reject: '拒绝',
+    keywords: '关键字',
+    keywordPlaceholder: '请输入关键字',
+    keywordsRequired: '关键字不能为空'
+  },
+
+  // Suffix Filter Module
+  suffixFilter: {
+    title: '后缀过滤',
+    description: '配置文件后缀过滤',
+    add: '添加规则',
+    addTitle: '新增后缀过滤规则',
+    editTitle: '编辑后缀过滤规则',
+    deleteConfirm: '确定要删除该规则吗？',
+    username: '用户名',
+    suffix: '后缀',
+    suffixPlaceholder: '如 .exe .dll',
+    suffixRequired: '后缀不能为空',
+    filterMode: '过滤模式',
+    accept: '允许',
+    reject: '拒绝'
+  },
+
+  // Diagnostic Tools Module
+  diagnosticTools: {
+    title: '诊断工具',
+    description: '网络诊断工具',
+    ping: 'Ping',
+    traceroute: '路由追踪',
+    arp: 'ARP表',
+    tcpdump: '抓包工具',
+    tcping: 'TCPing',
+    networkInterface: '网络接口',
+    targetHost: '目标主机',
+    targetHostPlaceholder: '请输入目标主机或IP',
+    targetPort: '目标端口',
+    packetCount: '数据包数量',
+    packetSize: '数据包大小',
+    timeout: '超时时间',
+    run: '执行',
+    stop: '停止',
+    running: '运行中...',
+    result: '诊断结果',
+    interface: '接口',
+    ipRequired: '请输入IP地址',
+    ipInvalid: 'IP地址格式不正确',
+    notSameAsOld: '不能与原值相同'
   }
 }
