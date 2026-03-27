@@ -34,7 +34,10 @@ export default {
     seconds: '秒',
     index: '序号',
     actions: '操作',
-    vsLastPeriod: '较上期'
+    vsLastPeriod: '较上期',
+    detail: '详情',
+    time: '时间',
+    status: '状态'
   },
 
   // Login
@@ -270,7 +273,8 @@ export default {
       sourceIP: '源IP',
       targetIP: '目标IP',
       attackTime: '攻击时间',
-      blocked: '已拦截'
+      blocked: '已拦截',
+      passed: '已放行'
     },
     web: {
       title: 'Web日志',

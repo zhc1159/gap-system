@@ -34,7 +34,10 @@ export default {
     seconds: 'seconds',
     index: 'No.',
     actions: 'Actions',
-    vsLastPeriod: 'vs last period'
+    vsLastPeriod: 'vs last period',
+    detail: 'Detail',
+    time: 'Time',
+    status: 'Status'
   },
 
   // Login
@@ -270,7 +273,8 @@ export default {
       sourceIP: 'Source IP',
       targetIP: 'Target IP',
       attackTime: 'Attack Time',
-      blocked: 'Blocked'
+      blocked: 'Blocked',
+      passed: 'Passed'
     },
     web: {
       title: 'Web Logs',
