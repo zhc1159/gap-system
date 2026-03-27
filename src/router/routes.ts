@@ -30,6 +30,16 @@ const AuditAttack = () => import('@/views/audit/AttackLog.vue')
 const AuditWeb = () => import('@/views/audit/WebLog.vue')
 const AuditSession = () => import('@/views/audit/SessionLog.vue')
 const AuditOperation = () => import('@/views/audit/OperationLog.vue')
+const AuditDbSync = () => import('@/views/audit/DbSyncLog.vue')
+const AuditFerryLogin = () => import('@/views/audit/FerryLoginLog.vue')
+const AuditFerryReceive = () => import('@/views/audit/FerryReceiveLog.vue')
+const AuditFerrySend = () => import('@/views/audit/FerrySendLog.vue')
+const AuditFileSync = () => import('@/views/audit/FileSynLog.vue')
+const AuditGapLog = () => import('@/views/audit/GapLog.vue')
+const AuditIfcfgStatus = () => import('@/views/audit/IfcfgStatusLog.vue')
+const AuditLogConfig = () => import('@/views/audit/LogConfig.vue')
+const AuditOutAtk = () => import('@/views/audit/OutAtkLog.vue')
+const AuditStrategy = () => import('@/views/audit/StrategyLog.vue')
 
 // Views - Maintenance
 const MaintenanceBackup = () => import('@/views/maintenance/BackupConfig.vue')
@@ -347,6 +357,116 @@ export const dynamicRoutes: RouteRecordRaw[] = [
           title: '操作日志',
           titleEn: 'Operation Logs',
           icon: 'fa-tools',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'db-sync',
+        name: 'AuditDbSync',
+        component: AuditDbSync,
+        meta: {
+          title: '数据库同步日志',
+          titleEn: 'Database Sync Logs',
+          icon: 'fa-database',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'ferry-login',
+        name: 'AuditFerryLogin',
+        component: AuditFerryLogin,
+        meta: {
+          title: '摆渡登录日志',
+          titleEn: 'Ferry Login Logs',
+          icon: 'fa-user',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'ferry-receive',
+        name: 'AuditFerryReceive',
+        component: AuditFerryReceive,
+        meta: {
+          title: '摆渡接收日志',
+          titleEn: 'Ferry Receive Logs',
+          icon: 'fa-download',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'ferry-send',
+        name: 'AuditFerrySend',
+        component: AuditFerrySend,
+        meta: {
+          title: '摆渡发送日志',
+          titleEn: 'Ferry Send Logs',
+          icon: 'fa-upload',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'file-sync',
+        name: 'AuditFileSync',
+        component: AuditFileSync,
+        meta: {
+          title: '文件同步日志',
+          titleEn: 'File Sync Logs',
+          icon: 'fa-files-o',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'gap-log',
+        name: 'AuditGapLog',
+        component: AuditGapLog,
+        meta: {
+          title: 'GAP系统日志',
+          titleEn: 'GAP System Logs',
+          icon: 'fa-file-text',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'ifcfg-status',
+        name: 'AuditIfcfgStatus',
+        component: AuditIfcfgStatus,
+        meta: {
+          title: '接口配置状态日志',
+          titleEn: 'Interface Status Logs',
+          icon: 'fa-plug',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'log-config',
+        name: 'AuditLogConfig',
+        component: AuditLogConfig,
+        meta: {
+          title: '日志配置',
+          titleEn: 'Log Configuration',
+          icon: 'fa-cog',
+          roles: ['sysadm', 'admin']
+        }
+      },
+      {
+        path: 'out-atk',
+        name: 'AuditOutAtk',
+        component: AuditOutAtk,
+        meta: {
+          title: '出站攻击日志',
+          titleEn: 'Outbound Attack Logs',
+          icon: 'fa-warning',
+          roles: ['sysadm', 'admin', 'auditor']
+        }
+      },
+      {
+        path: 'strategy',
+        name: 'AuditStrategy',
+        component: AuditStrategy,
+        meta: {
+          title: '策略日志',
+          titleEn: 'Strategy Logs',
+          icon: 'fa-shield',
           roles: ['sysadm', 'admin', 'auditor']
         }
       }
