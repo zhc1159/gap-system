@@ -362,6 +362,45 @@ export default {
     other: 'Other'
   },
 
+  // Transparent Rule
+  transparentRule: {
+    input: {
+      title: 'Input Rules Management',
+      ruleName: 'Rule Name',
+      ruleNamePlaceholder: 'Letters, numbers, underscores',
+      ruleNameRequired: 'Please enter rule name',
+      protocol: 'Protocol',
+      protocolRequired: 'Please select protocol',
+      protocols: {
+        any: 'Any',
+        tcp: 'TCP',
+        udp: 'UDP',
+        icmp: 'ICMP',
+        igmp: 'IGMP'
+      },
+      inInterface: 'In Interface',
+      inInterfaceRequired: 'Please select in interface',
+      sourceIpGroup: 'Source IP Group',
+      sourcePortGroup: 'Source Port Group',
+      destIpGroup: 'Dest IP Group',
+      destPortGroup: 'Dest Port Group',
+      timeGroup: 'Time Group',
+      action: 'Action',
+      actionRequired: 'Please select action',
+      index: 'Index',
+      sort: 'Sort',
+      sortRules: 'Sort Rules',
+      originalIndex: 'Original Index',
+      targetIndex: 'Target Index',
+      apply: 'Apply',
+      applyConfirm: 'Are you sure to apply rule configuration?',
+      applySuccess: 'Rules applied successfully',
+      sortSuccess: 'Sorted successfully',
+      enabled: 'Enabled',
+      disabled: 'Disabled'
+    }
+  },
+
   // Footer
   footer: {
     copyright: '© 2024 Security Gap System',

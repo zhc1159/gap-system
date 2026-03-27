@@ -362,6 +362,45 @@ export default {
     other: '其他'
   },
 
+  // Transparent Rule
+  transparentRule: {
+    input: {
+      title: '入站规则管理',
+      ruleName: '规则名称',
+      ruleNamePlaceholder: '由字母数字下划线构成',
+      ruleNameRequired: '请输入规则名称',
+      protocol: '协议',
+      protocolRequired: '请选择协议',
+      protocols: {
+        any: '任意',
+        tcp: 'TCP',
+        udp: 'UDP',
+        icmp: 'ICMP',
+        igmp: 'IGMP'
+      },
+      inInterface: '入口设备',
+      inInterfaceRequired: '请选择入口设备',
+      sourceIpGroup: '源IP组',
+      sourcePortGroup: '源端口组',
+      destIpGroup: '目的IP组',
+      destPortGroup: '目的端口组',
+      timeGroup: '时间组',
+      action: '动作',
+      actionRequired: '请选择动作',
+      index: '序号',
+      sort: '排序',
+      sortRules: '排序规则',
+      originalIndex: '原序号',
+      targetIndex: '目标序号',
+      apply: '应用',
+      applyConfirm: '确定要应用规则配置吗？',
+      applySuccess: '规则应用成功',
+      sortSuccess: '排序成功',
+      enabled: '已启用',
+      disabled: '已禁用'
+    }
+  },
+
   // Footer
   footer: {
     copyright: '© 2024 安全隔离网闸系统',

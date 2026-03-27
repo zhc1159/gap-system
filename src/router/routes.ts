@@ -352,6 +352,31 @@ export const dynamicRoutes: RouteRecordRaw[] = [
       }
     ]
   },
+  // Transparent Rule Management
+  {
+    path: '/transparentRule',
+    component: BaseLayout,
+    redirect: '/transparentRule/input',
+    meta: {
+      title: '透明规则',
+      titleEn: 'Transparent Rules',
+      icon: 'fa-filter',
+      roles: ['sysadm', 'admin']
+    },
+    children: [
+      {
+        path: 'input',
+        name: 'TransparentInput',
+        component: () => import('@/views/transparentRule/InputRules.vue'),
+        meta: {
+          title: '入站规则',
+          titleEn: 'Input Rules',
+          icon: 'fa-filter',
+          roles: ['sysadm', 'admin']
+        }
+      }
+    ]
+  },
   // Maintenance
   {
     path: '/maintenance',
