@@ -326,6 +326,7 @@ function handleAdd() {
 }
 
 function handleEdit(row: any) {
+  void row
   Object.assign(form, {
     name: row.name,
     proto: row.proto,

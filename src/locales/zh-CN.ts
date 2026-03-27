@@ -456,6 +456,117 @@ export default {
       portScan: '端口扫描',
       dnsLookup: 'DNS查询',
       result: '诊断结果'
+    },
+    antiVirus: {
+      title: '病毒库升级',
+      uploadFile: '上传文件',
+      uploadPlaceholder: '请上传.cvd文件',
+      uploading: '上传中...',
+      verifying: '校验病毒库中...',
+      engine: '杀毒引擎',
+      fileList: '升级文件列表',
+      fileName: '文件名',
+      version: '版本号',
+      updateTime: '升级时间',
+      autoUpdate: '自动升级',
+      manualUpdate: '手动升级',
+      manualUpdateConfirm: '确定要手动升级病毒库吗？',
+      updateDisabled: '最近已经升级，请稍后...',
+      uploadSuccess: '病毒库升级成功',
+      uploadFailed: '病毒库升级失败'
+    },
+    configImport: {
+      title: '配置导入',
+      downloadTemplate: '下载模板',
+      importIntranet: '导入内网规则',
+      importExtranet: '导入外网规则',
+      uploadTitle: '上传{type}配置规则',
+      uploadPlaceholder: '请上传.xlsx文件',
+      uploading: '导入规则文件中...',
+      uploadSuccess: '导入成功',
+      uploadFailed: '导入失败',
+      internal: '内网',
+      external: '外网'
+    },
+    diagTool: {
+      title: '诊断工具',
+      ping: 'Ping测试',
+      traceroute: '路由追踪',
+      arp: 'ARP表',
+      tcpdump: '抓包工具',
+      tcping: 'TCP端口测试',
+      networkInterface: '网络接口',
+      ipAddress: 'IP地址/域名',
+      port: '端口',
+      protocol: '协议',
+      packetCount: '数据包数量',
+      timeout: '超时时间',
+      start: '开始测试',
+      stop: '终止',
+      running: '诊断中...',
+      result: '诊断结果',
+      internal: '内网',
+      external: '外网'
+    },
+    license: {
+      title: '软件授权',
+      status: '授权状态',
+      viewDeviceCode: '查看设备码',
+      deviceCode: '设备码',
+      uploadArea: '将授权文件拖到这里',
+      selectFile: '点击选择文件',
+      uploadSuccess: '授权成功',
+      uploadFailed: '授权失败',
+      remainingTime: '剩余{days}天',
+      expired: '授权已过期',
+      copySuccess: '复制成功'
+    },
+    profile: {
+      title: '配置存档',
+      description: '描述',
+      fileName: '存档名称',
+      date: '日期',
+      action: '操作',
+      addProfile: '添加存档',
+      uploadProfile: '上传存档',
+      restore: '恢复',
+      delete: '删除',
+      download: '下载',
+      current: '当前版本',
+      restoreConfirm: '确定恢复该存档吗？',
+      deleteConfirm: '确定删除该存档吗？',
+      restoreSuccess: '恢复成功',
+      deleteSuccess: '删除成功',
+      uploadPlaceholder: '请上传.tgz文件'
+    },
+    powerControl: {
+      title: '系统开关机',
+      reboot: '重启系统',
+      shutdown: '关闭系统',
+      rebootConfirm: '确定要重启系统吗？此操作将中断所有服务。',
+      shutdownConfirm: '确定要关闭系统吗？此操作不可撤销。',
+      rebootSuccess: '系统正在重启...',
+      shutdownSuccess: '系统正在关闭...',
+      warning: '警告：重启或关闭系统将中断所有正在进行的操作，请确保已保存所有数据。'
+    },
+    profileBackup: {
+      title: '配置备份',
+      autoBackup: '自动备份',
+      interval: '间隔时间',
+      minutes: '分',
+      ftpIp: 'FTP服务器IP',
+      ftpPort: 'FTP端口',
+      ftpUser: 'FTP用户名',
+      ftpPassword: 'FTP密码',
+      uploadPath: '本地上传路径',
+      save: '保存配置'
+    },
+    sysUpdate: {
+      title: '系统升级',
+      uploadPackage: '上传升级包',
+      rollbackInit: '回退初始版本',
+      currentVersion: '当前版本',
+      upgradeHistory: '升级历史'
     }
   },
 
@@ -525,5 +636,178 @@ export default {
   footer: {
     copyright: '© 2024 安全隔离网闸系统',
     version: '版本'
+  },
+
+  // Password (Change & Update)
+  password: {
+    change: {
+      title: '修改密码',
+      subtitle: '请设置您的新密码',
+      expiredTitle: '密码已过期',
+      expiredMessage: '您的密码已过期，请修改密码后继续使用',
+      firstLoginTitle: '首次登录',
+      firstLoginMessage: '检测到您是首次登录，请修改初始密码',
+      oldPassword: '原密码',
+      oldPasswordPlaceholder: '请输入原密码',
+      newPassword: '新密码',
+      newPasswordPlaceholder: '请输入新密码',
+      confirmPassword: '确认新密码',
+      confirmPasswordPlaceholder: '请再次输入新密码',
+      submit: '更 新',
+      submitting: '更新中...',
+      rules: {
+        title: '密码要求',
+        minLength: '至少 8 个字符',
+        maxLength: '最多 16 个字符',
+        hasLowercase: '包含小写字母 (a-z)',
+        hasUppercase: '包含大写字母 (A-Z)',
+        hasNumber: '包含数字 (0-9)',
+        hasSpecial: '包含特殊字符 (!@#$%^&*)',
+        noSpaces: '不能包含空格',
+        notSameAsOld: '不能与原密码相同'
+      },
+      strength: {
+        title: '密码强度',
+        weak: '弱',
+        fair: '一般',
+        good: '良好',
+        strong: '强',
+        veryStrong: '非常强'
+      },
+      validation: {
+        oldPasswordRequired: '请输入原密码',
+        newPasswordRequired: '请输入新密码',
+        confirmPasswordRequired: '请确认新密码',
+        passwordMismatch: '两次输入的密码不一致',
+        invalidFormat: '密码格式不符合要求',
+        sameAsOld: '新密码不能与原密码相同'
+      },
+      message: {
+        success: '密码修改成功',
+        failed: '密码修改失败',
+        oldPasswordIncorrect: '原密码不正确',
+        networkError: '网络错误，请稍后重试',
+        redirectMessage: '秒后自动跳转...'
+      },
+      success: {
+        title: '修改成功',
+        description: '您的密码已成功修改，请使用新密码重新登录',
+        backToLogin: '返回登录'
+      }
+    },
+    update: {
+      title: '设置密码',
+      subtitle: '创建您的新密码',
+      newPassword: '新密码',
+      newPasswordPlaceholder: '请输入新密码',
+      confirmPassword: '确认新密码',
+      confirmPasswordPlaceholder: '请再次输入新密码',
+      submit: '更 新',
+      submitting: '更新中...',
+      rules: {
+        title: '密码要求',
+        minLength: '至少 8 个字符',
+        maxLength: '最多 16 个字符',
+        hasLowercase: '包含小写字母 (a-z)',
+        hasUppercase: '包含大写字母 (A-Z)',
+        hasNumber: '包含数字 (0-9)',
+        hasSpecial: '包含特殊字符 (!@#$%^&*)',
+        noSpaces: '不能包含空格'
+      },
+      strength: {
+        title: '密码强度',
+        weak: '弱',
+        fair: '一般',
+        good: '良好',
+        strong: '强',
+        veryStrong: '非常强'
+      },
+      validation: {
+        newPasswordRequired: '请输入新密码',
+        confirmPasswordRequired: '请确认新密码',
+        passwordMismatch: '两次输入的密码不一致',
+        invalidFormat: '密码格式不符合要求'
+      },
+      message: {
+        success: '密码设置成功',
+        failed: '密码设置失败',
+        networkError: '网络错误，请稍后重试'
+      },
+      success: {
+        title: '设置成功',
+        description: '您的密码已成功设置',
+        backToProfile: '返回个人中心'
+      }
+    }
+  },
+
+  // Client Login
+  clientLogin: {
+    title: '用户登录',
+    subtitle: '欢迎回来',
+    username: '账号',
+    usernamePlaceholder: '请输入账号',
+    password: '密码',
+    passwordPlaceholder: '请输入密码',
+    fingerprint: '取指纹',
+    fingerprintTip: '按压指纹采集器...',
+    otp: '一次性口令',
+    otpPlaceholder: '请输入一次性口令',
+    privacy: '承诺不采集用户信息',
+    privacyDetail: '了解详情',
+    submit: '登 录',
+    logging: '登录中...',
+    validation: {
+      usernameRequired: '请输入账号',
+      passwordRequired: '请输入密码',
+      otpRequired: '请输入一次性口令',
+      privacyRequired: '请确认隐私承诺'
+    },
+    message: {
+      success: '登录成功，正在跳转...',
+      failed: '登录失败，请重试',
+      networkError: '网络错误，请稍后重试',
+      fingerprintSuccess: '指纹采集成功',
+      fingerprintFailed: '指纹采集失败'
+    },
+    footer: {
+      help: '需要帮助？',
+      contact: '联系管理员'
+    }
+  },
+
+  // Client Management
+  clientManage: {
+    title: '客户端管理',
+    subtitle: '管理所有客户端连接',
+    addClient: '添加客户端',
+    editClient: '修改客户端',
+    clientId: '客户端ID',
+    clientName: '客户端名称',
+    clientNamePlaceholder: '请输入客户端名称',
+    ipAddress: 'IP地址',
+    ipPlaceholder: '请输入IP地址',
+    status: '状态',
+    active: '已激活',
+    inactive: '未激活',
+    lastLogin: '最后登录',
+    createdAt: '创建时间',
+    description: '描述',
+    descPlaceholder: '请输入描述信息',
+    authMethod: '认证方式',
+    initialPwd: '初始密码',
+    initialPwdPlaceholder: '请输入初始密码',
+    enable: '启用',
+    disable: '禁用',
+    searchPlaceholder: '搜索客户端名称/ID/IP',
+    toggleConfirm: '确定要{action}客户端【{name}】吗？',
+    deleteConfirm: '确定要删除客户端【{name}】吗？',
+    validation: {
+      clientNameRequired: '请输入客户端名称',
+      ipRequired: '请输入IP地址',
+      ipInvalid: '请输入有效的IP地址',
+      authMethodRequired: '请选择认证方式',
+      initialPwdRequired: '请输入初始密码'
+    }
   }
 }

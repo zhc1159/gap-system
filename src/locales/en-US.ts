@@ -458,6 +458,117 @@ export default {
       portScan: 'Port Scan',
       dnsLookup: 'DNS Lookup',
       result: 'Result'
+    },
+    antiVirus: {
+      title: 'Virus Database Update',
+      uploadFile: 'Upload File',
+      uploadPlaceholder: 'Please upload .cvd file',
+      uploading: 'Uploading...',
+      verifying: 'Verifying virus database...',
+      engine: 'Antivirus Engine',
+      fileList: 'Update File List',
+      fileName: 'File Name',
+      version: 'Version',
+      updateTime: 'Update Time',
+      autoUpdate: 'Auto Update',
+      manualUpdate: 'Manual Update',
+      manualUpdateConfirm: 'Are you sure to manually update the virus database?',
+      updateDisabled: 'Recently updated, please wait...',
+      uploadSuccess: 'Virus database updated successfully',
+      uploadFailed: 'Virus database update failed'
+    },
+    configImport: {
+      title: 'Configuration Import',
+      downloadTemplate: 'Download Template',
+      importIntranet: 'Import Intranet Rules',
+      importExtranet: 'Import Extranet Rules',
+      uploadTitle: 'Upload {type} Configuration Rules',
+      uploadPlaceholder: 'Please upload .xlsx file',
+      uploading: 'Importing rule file...',
+      uploadSuccess: 'Import successful',
+      uploadFailed: 'Import failed',
+      internal: 'Intranet',
+      external: 'Extranet'
+    },
+    diagTool: {
+      title: 'Diagnostic Tools',
+      ping: 'Ping Test',
+      traceroute: 'Trace Route',
+      arp: 'ARP Table',
+      tcpdump: 'Packet Capture',
+      tcping: 'TCP Port Test',
+      networkInterface: 'Network Interface',
+      ipAddress: 'IP Address/Domain',
+      port: 'Port',
+      protocol: 'Protocol',
+      packetCount: 'Packet Count',
+      timeout: 'Timeout',
+      start: 'Start Test',
+      stop: 'Stop',
+      running: 'Diagnosing...',
+      result: 'Diagnostic Result',
+      internal: 'Internal',
+      external: 'External'
+    },
+    license: {
+      title: 'License Management',
+      status: 'License Status',
+      viewDeviceCode: 'View Device Code',
+      deviceCode: 'Device Code',
+      uploadArea: 'Drop license file here',
+      selectFile: 'Click to select file',
+      uploadSuccess: 'License uploaded successfully',
+      uploadFailed: 'License upload failed',
+      remainingTime: '{days} days remaining',
+      expired: 'License expired',
+      copySuccess: 'Copied successfully'
+    },
+    profile: {
+      title: 'Profile Management',
+      description: 'Description',
+      fileName: 'Profile Name',
+      date: 'Date',
+      action: 'Action',
+      addProfile: 'Add Profile',
+      uploadProfile: 'Upload Profile',
+      restore: 'Restore',
+      delete: 'Delete',
+      download: 'Download',
+      current: 'Current Version',
+      restoreConfirm: 'Are you sure to restore this profile?',
+      deleteConfirm: 'Are you sure to delete this profile?',
+      restoreSuccess: 'Restore successful',
+      deleteSuccess: 'Delete successful',
+      uploadPlaceholder: 'Please upload .tgz file'
+    },
+    powerControl: {
+      title: 'System Power Control',
+      reboot: 'Reboot System',
+      shutdown: 'Shutdown System',
+      rebootConfirm: 'Are you sure to reboot the system? This will interrupt all services.',
+      shutdownConfirm: 'Are you sure to shutdown the system? This action cannot be undone.',
+      rebootSuccess: 'System is rebooting...',
+      shutdownSuccess: 'System is shutting down...',
+      warning: 'Warning: Rebooting or shutting down the system will interrupt all ongoing operations. Please ensure all data has been saved.'
+    },
+    profileBackup: {
+      title: 'Configuration Backup',
+      autoBackup: 'Auto Backup',
+      interval: 'Interval',
+      minutes: 'minutes',
+      ftpIp: 'FTP Server IP',
+      ftpPort: 'FTP Port',
+      ftpUser: 'FTP Username',
+      ftpPassword: 'FTP Password',
+      uploadPath: 'Upload Path',
+      save: 'Save Configuration'
+    },
+    sysUpdate: {
+      title: 'System Update',
+      uploadPackage: 'Upload Update Package',
+      rollbackInit: 'Rollback to Initial Version',
+      currentVersion: 'Current Version',
+      upgradeHistory: 'Upgrade History'
     }
   },
 
@@ -527,5 +638,178 @@ export default {
   footer: {
     copyright: '© 2024 Security Gap System',
     version: 'Version'
+  },
+
+  // Password (Change & Update)
+  password: {
+    change: {
+      title: 'Change Password',
+      subtitle: 'Please set your new password',
+      expiredTitle: 'Password Expired',
+      expiredMessage: 'Your password has expired. Please change it to continue',
+      firstLoginTitle: 'First Time Login',
+      firstLoginMessage: 'First time login detected. Please change your initial password',
+      oldPassword: 'Current Password',
+      oldPasswordPlaceholder: 'Enter current password',
+      newPassword: 'New Password',
+      newPasswordPlaceholder: 'Enter new password',
+      confirmPassword: 'Confirm Password',
+      confirmPasswordPlaceholder: 'Re-enter new password',
+      submit: 'Update',
+      submitting: 'Updating...',
+      rules: {
+        title: 'Password Requirements',
+        minLength: 'At least 8 characters',
+        maxLength: 'Maximum 16 characters',
+        hasLowercase: 'Contains lowercase letter (a-z)',
+        hasUppercase: 'Contains uppercase letter (A-Z)',
+        hasNumber: 'Contains number (0-9)',
+        hasSpecial: 'Contains special character (!@#$%^&*)',
+        noSpaces: 'No spaces allowed',
+        notSameAsOld: 'Must be different from current password'
+      },
+      strength: {
+        title: 'Password Strength',
+        weak: 'Weak',
+        fair: 'Fair',
+        good: 'Good',
+        strong: 'Strong',
+        veryStrong: 'Very Strong'
+      },
+      validation: {
+        oldPasswordRequired: 'Please enter current password',
+        newPasswordRequired: 'Please enter new password',
+        confirmPasswordRequired: 'Please confirm new password',
+        passwordMismatch: 'Passwords do not match',
+        invalidFormat: 'Password format is invalid',
+        sameAsOld: 'New password cannot be the same as current password'
+      },
+      message: {
+        success: 'Password changed successfully',
+        failed: 'Failed to change password',
+        oldPasswordIncorrect: 'Current password is incorrect',
+        networkError: 'Network error, please try again later',
+        redirectMessage: 'seconds until redirect...'
+      },
+      success: {
+        title: 'Success',
+        description: 'Your password has been changed. Please login with your new password',
+        backToLogin: 'Back to Login'
+      }
+    },
+    update: {
+      title: 'Set Password',
+      subtitle: 'Create your new password',
+      newPassword: 'New Password',
+      newPasswordPlaceholder: 'Enter new password',
+      confirmPassword: 'Confirm Password',
+      confirmPasswordPlaceholder: 'Re-enter new password',
+      submit: 'Update',
+      submitting: 'Updating...',
+      rules: {
+        title: 'Password Requirements',
+        minLength: 'At least 8 characters',
+        maxLength: 'Maximum 16 characters',
+        hasLowercase: 'Contains lowercase letter (a-z)',
+        hasUppercase: 'Contains uppercase letter (A-Z)',
+        hasNumber: 'Contains number (0-9)',
+        hasSpecial: 'Contains special character (!@#$%^&*)',
+        noSpaces: 'No spaces allowed'
+      },
+      strength: {
+        title: 'Password Strength',
+        weak: 'Weak',
+        fair: 'Fair',
+        good: 'Good',
+        strong: 'Strong',
+        veryStrong: 'Very Strong'
+      },
+      validation: {
+        newPasswordRequired: 'Please enter new password',
+        confirmPasswordRequired: 'Please confirm new password',
+        passwordMismatch: 'Passwords do not match',
+        invalidFormat: 'Password format is invalid'
+      },
+      message: {
+        success: 'Password set successfully',
+        failed: 'Failed to set password',
+        networkError: 'Network error, please try again later'
+      },
+      success: {
+        title: 'Success',
+        description: 'Your password has been set successfully',
+        backToProfile: 'Back to Profile'
+      }
+    }
+  },
+
+  // Client Login
+  clientLogin: {
+    title: 'User Login',
+    subtitle: 'Welcome Back',
+    username: 'Username',
+    usernamePlaceholder: 'Enter username',
+    password: 'Password',
+    passwordPlaceholder: 'Enter password',
+    fingerprint: 'Scan Fingerprint',
+    fingerprintTip: 'Press fingerprint scanner...',
+    otp: 'One-Time Password',
+    otpPlaceholder: 'Enter OTP',
+    privacy: 'Commitment: No user data collection',
+    privacyDetail: 'Learn More',
+    submit: 'Login',
+    logging: 'Logging in...',
+    validation: {
+      usernameRequired: 'Please enter username',
+      passwordRequired: 'Please enter password',
+      otpRequired: 'Please enter OTP',
+      privacyRequired: 'Please accept privacy commitment'
+    },
+    message: {
+      success: 'Login successful, redirecting...',
+      failed: 'Login failed, please try again',
+      networkError: 'Network error, please try again later',
+      fingerprintSuccess: 'Fingerprint captured successfully',
+      fingerprintFailed: 'Fingerprint capture failed'
+    },
+    footer: {
+      help: 'Need Help?',
+      contact: 'Contact Admin'
+    }
+  },
+
+  // Client Management
+  clientManage: {
+    title: 'Client Management',
+    subtitle: 'Manage all client connections',
+    addClient: 'Add Client',
+    editClient: 'Edit Client',
+    clientId: 'Client ID',
+    clientName: 'Client Name',
+    clientNamePlaceholder: 'Enter client name',
+    ipAddress: 'IP Address',
+    ipPlaceholder: 'Enter IP address',
+    status: 'Status',
+    active: 'Active',
+    inactive: 'Inactive',
+    lastLogin: 'Last Login',
+    createdAt: 'Created At',
+    description: 'Description',
+    descPlaceholder: 'Enter description',
+    authMethod: 'Auth Method',
+    initialPwd: 'Initial Password',
+    initialPwdPlaceholder: 'Enter initial password',
+    enable: 'Enable',
+    disable: 'Disable',
+    searchPlaceholder: 'Search by name/ID/IP',
+    toggleConfirm: 'Are you sure to {action} client [{name}]?',
+    deleteConfirm: 'Are you sure to delete client [{name}]?',
+    validation: {
+      clientNameRequired: 'Please enter client name',
+      ipRequired: 'Please enter IP address',
+      ipInvalid: 'Please enter a valid IP address',
+      authMethodRequired: 'Please select auth method',
+      initialPwdRequired: 'Please enter initial password'
+    }
   }
 }
