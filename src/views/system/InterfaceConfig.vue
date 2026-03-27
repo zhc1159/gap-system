@@ -92,7 +92,7 @@
     <!-- Edit Dialog -->
     <el-dialog v-model="editVisible" :title="t('common.edit') + ' - ' + (currentInterface?.name || '')" width="500px">
       <el-form v-if="editForm" :model="editForm" label-width="100px">
-        <el-form-item label="IP {{ t('system.interface.address') || '地址' }}">
+        <el-form-item :label="ipAddressLabel">
           <el-input v-model="editForm.ip" placeholder="192.168.1.1" />
         </el-form-item>
         <el-form-item :label="t('system.interface.mask')">
@@ -111,7 +111,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import {
   Setting,
@@ -126,6 +126,9 @@ import { ElMessage } from 'element-plus'
 import PageHeader from '@/components/PageHeader.vue'
 
 const { t } = useI18n()
+
+// Computed labels
+const ipAddressLabel = computed(() => 'IP ' + (t('system.interface.address') || '地址'))
 
 // Interface data
 const interfaces = ref<any[]>([])
