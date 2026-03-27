@@ -330,6 +330,29 @@ export default {
     }
   },
 
+  // Dashboard
+  dashboard: {
+    resourceUsage: 'Resource Usage',
+    networkTraffic: 'Network Traffic',
+    attackDistribution: 'Attack Distribution',
+    connectionStatus: 'Connection Status',
+    linkStatus: 'Link Status',
+    systemAlerts: 'System Alerts',
+    viewAll: 'View All',
+    lastHour: 'Last Hour',
+    last6Hours: 'Last 6 Hours',
+    last24Hours: 'Last 24 Hours',
+    inbound: 'Inbound',
+    outbound: 'Outbound',
+    attackType: 'Attack Type',
+    activeConnections: 'Active Connections',
+    sqlInjection: 'SQL Injection',
+    xss: 'XSS Attack',
+    ddos: 'DDoS Attack',
+    bruteForce: 'Brute Force',
+    other: 'Other'
+  },
+
   // Footer
   footer: {
     copyright: '© 2024 Security Gap System',

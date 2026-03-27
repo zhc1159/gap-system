@@ -330,6 +330,29 @@ export default {
     }
   },
 
+  // Dashboard
+  dashboard: {
+    resourceUsage: '资源使用率',
+    networkTraffic: '网络流量',
+    attackDistribution: '攻击类型分布',
+    connectionStatus: '连接状态',
+    linkStatus: '链路状态',
+    systemAlerts: '系统告警',
+    viewAll: '查看全部',
+    lastHour: '最近1小时',
+    last6Hours: '最近6小时',
+    last24Hours: '最近24小时',
+    inbound: '入站',
+    outbound: '出站',
+    attackType: '攻击类型',
+    activeConnections: '活跃连接',
+    sqlInjection: 'SQL注入',
+    xss: 'XSS攻击',
+    ddos: 'DDoS攻击',
+    bruteForce: '暴力破解',
+    other: '其他'
+  },
+
   // Footer
   footer: {
     copyright: '© 2024 安全隔离网闸系统',
